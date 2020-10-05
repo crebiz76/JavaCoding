@@ -1,15 +1,29 @@
 // [바로실행] 생활코딩 - 자바(JAVA)
+import java.util.ArrayList; // As for Chapter05.section11
+
 class Main
 {
   public static void main(String[] args)
   {
-    Chapter05.section10();
+    Chapter05.section11();
   }
 }
 
 // 05 - 데이터 타입
 class Chapter05
 { 
+  // 11.데이터 타입의 종류
+  public static void section11()
+  {
+    // Self-test
+    Integer i = 123;
+    String str = "abc";
+    ArrayList<String> list = new ArrayList<String>();
+    System.out.println(i.getClass().getName());
+    System.out.println(str.getClass().getName());
+    System.out.println(list.getClass().getName());
+  }
+  
   // 10. 데이터의 크기
   public static void section10()
   {
