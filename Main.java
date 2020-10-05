@@ -3,13 +3,25 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter03.section5();
+    Chapter03.section6();
   }
 }
 
 // 03 - 변수
 class Chapter03
 {
+  // 6. 문자열
+  public static void section6()
+  {
+    String first = "coding";
+    System.out.println(first+" "+"everybody");
+
+    String a, b;
+    a = "coding";
+    b = " everybody";
+    System.out.println(a+b);
+  }
+  
   // 5. 정수와 실수
   public static void section5()
   {
