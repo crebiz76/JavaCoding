@@ -5,7 +5,38 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter08.section18();
+    Chapter09.section19();
+  }
+}
+
+// 09 - 비교와 Boolean
+class Chapter09
+{
+  // 19. 비교와 Boolean
+  public static void section19()
+  {
+    System.out.println(1==2);   //F
+    System.out.println(1==1);   //T
+    System.out.println();
+    
+    System.out.println(1!=2);   //T
+    System.out.println(1!=1);   //F
+    System.out.println();
+    
+    System.out.println(10>20);  //F
+    System.out.println(10>2);   //T
+    System.out.println(10>10);  //F
+    System.out.println();
+    
+    System.out.println(10>=20); //F
+    System.out.println(10>=2);  //T
+    System.out.println(10>=10); //T    
+    System.out.println();
+
+    String a = "Hello, world";
+    String b = new String("Hello, world");
+    System.out.println(a==b);
+    System.out.println(a.equals(b));
   }
 }
 
