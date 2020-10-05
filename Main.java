@@ -6,13 +6,29 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter12.section30();
+    Chapter12.section31();
   }
 }
 
 // 12 - 반복문
 class Chapter12
 {
+  // 31. 반복문의 제어
+  public static void section31()
+  {
+    for(int i = 0; i < 10; i++)
+    {
+      if(i == 5) break;
+      System.out.println("Coding Everybody" + i);
+    }
+
+    for(int j = 0; j < 10; j++)
+    {
+      if(j == 5) continue;
+      System.out.println("Everybody Coding" + j);
+    }
+  }
+  
   // 30. 반복문이 없다면
   public static void section30()
   {
