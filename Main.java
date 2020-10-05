@@ -3,13 +3,29 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter03.section6();
+    Chapter03.section7();
   }
 }
 
 // 03 - 변수
 class Chapter03
 {
+  // 7. 변수의 효용
+  public static void section7()
+  {
+    System.out.println(100 + 10);
+    System.out.println((100 + 10) / 10);
+    System.out.println(((100 + 10) / 10) - 10);
+    System.out.println((((100 + 10) / 10) - 10) * 10);
+    System.out.println();
+
+    int a = 100;
+    System.out.println(a + 10);
+    System.out.println((a + 10) / 10);
+    System.out.println(((a + 10) / 10) - 10);
+    System.out.println((((a + 10) / 10) - 10) * 10);
+  }
+  
   // 6. 문자열
   public static void section6()
   {
