@@ -6,13 +6,33 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter11.section25();
+    Chapter11.section26();
   }
 }
 
 // 11 - 논리 연산자 
 class Chapter11
 {
+  // 26. OR 연산자 
+  public static void section26()
+  {
+    System.out.print("Input your id?_\b");
+    Scanner sc = new Scanner(System.in);
+    String id = sc.next();
+    System.out.print("Input your password?_\b");
+    String pw = sc.next();
+    sc.close();
+
+    if((id.equals("egoing") || (id.equals("crebiz"))) && (pw.equals("1111")))
+    {
+      System.out.println("Access OK");
+    }
+    else
+    {
+      System.out.println("Access Denied");
+    }
+  }
+
   // 25. AND 연산자 
   public static void section25()
   {
