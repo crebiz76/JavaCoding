@@ -5,7 +5,30 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter09.section19();
+    Chapter10.section20();
+  }
+}
+
+// 10 - 조건문
+class Chapter10
+{
+  // 20. 조건문 if
+  public static void section20()
+  {
+    if(true)
+    {
+      System.out.println("1st if condition is True");
+    }
+
+    if(false)
+    {
+      System.out.println();
+    }
+    else
+    {
+      System.out.println("2nd if condition is false");
+    }
+
   }
 }
 
