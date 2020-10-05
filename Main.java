@@ -6,13 +6,20 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter11.section26();
+    Chapter11.section27();
   }
 }
 
 // 11 - 논리 연산자 
 class Chapter11
 {
+  // 27. NOT 연산자 
+  public static void section27()
+  {
+    if(!true) System.out.println("False");
+    if(!false) System.out.println("True");
+  }
+  
   // 26. OR 연산자 
   public static void section26()
   {
