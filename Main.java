@@ -3,7 +3,19 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter04.section9();
+    Chapter05.section10();
+  }
+}
+
+// 05 - 데이터 타입
+class Chapter05
+{ 
+  // 10. 데이터의 크기
+  public static void section10()
+  {
+    String str = "데이터의 크기";
+    int len = str.length();
+    System.out.println(len);
   }
 }
 
