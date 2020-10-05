@@ -3,7 +3,20 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter01.section1();
+    Chapter02.section2();
+  }
+}
+
+// 02 - 숫자와 문자 
+class Chapter02
+{   
+  // 2. 숫자
+  public static void section2()
+  {
+    System.out.println(1+2);
+    System.out.println(1.2+1.3);
+    System.out.println(2*5);
+    System.out.println(6/2);
   }
 }
 
