@@ -5,13 +5,26 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter08.section16();
+    Chapter08.section17();
   }
 }
 
 // 08 - 연산자 
 class Chapter08
 {
+  // 17. 단항 연산자
+  public static void section17()
+  {
+    int i = 3;
+    i++;                    //4
+    System.out.println(i);  //4
+    ++i;                    //5
+    System.out.println(i);  //5
+    System.out.println(i++);//5
+    System.out.println(++i);//7
+    System.out.println(i);  //7
+  }
+
   // 16. 형 변환
   public static void section16()
   {
