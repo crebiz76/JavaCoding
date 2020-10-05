@@ -6,13 +6,43 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter10.section23();
+    Chapter10.section24();
   }
 }
 
 // 10 - 조건문
 class Chapter10
 {
+  // 24. 조건문 switch
+  public static void section24()
+  {
+    System.out.print("Input a integer value?_\b");
+    Scanner sc = new Scanner(System.in);
+    String input = sc.next();
+    sc.close();
+    int value = Integer.parseInt(input);
+    // System.out.println(value);
+
+    switch(value)
+    {
+      case 1:
+        System.out.println("one");
+      break;
+
+      case 2:
+        System.out.println("two");
+      break;
+
+      case 3:
+        System.out.println("three");
+      break;
+
+      default:
+        System.out.println("the other");
+      break;
+    } 
+  }
+
   // 23. 조건문의 중첩
   public static void section23()
   {
