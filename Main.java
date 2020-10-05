@@ -5,14 +5,26 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter07.section13();
+    Chapter07.section14();
   }
 }
 
 // 07 - 형 변환
 class Chapter07
 {
-  // 13. 형 변환
+  // 14. 명시적 형 변환
+  public static void section14()
+  {
+    // float a = 100.0; // incompatible types: possible lossy coversion from double to float
+    // int b = 100.0F; // incompatible types: possible lossy coversion from float to int
+    float a = (float)100.0;
+    int b = (int)100.0F;
+
+    System.out.println(a);
+    System.out.println(b);
+  }
+    
+    // 13. 형 변환
   public static void section13()
   {
     double a = 3.0F;
