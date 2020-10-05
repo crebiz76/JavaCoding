@@ -3,13 +3,28 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter03.section4();
+    Chapter03.section5();
   }
 }
 
 // 03 - 변수
 class Chapter03
 {
+  // 5. 정수와 실수
+  public static void section5()
+  {
+    int a;
+    a = 1;
+    System.out.println(a+1);
+    a = 2;
+    System.out.println(a+1);
+
+    double b = 1.1;
+    System.out.println(b+1.1);
+    b = 2.1;
+    System.out.println(b+1.1);
+  }
+
   // 4. 변수의 선언과 할당
   public static void section4()
   {
