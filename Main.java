@@ -6,13 +6,22 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter12.section28();
+    Chapter12.section29();
   }
 }
 
 // 12 - 반복문
 class Chapter12
 {
+  // 29. for 문 
+  public static void section29()
+  {
+    for(int i = 0; i < 10; i++)
+    {
+      System.out.println("Coding Everybody" + i);
+    }
+  }
+  
   // 28. while 문 
   public static void section28()
   {
