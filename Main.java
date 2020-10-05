@@ -6,18 +6,46 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter10.section22();
+    Chapter10.section23();
   }
 }
 
 // 10 - 조건문
 class Chapter10
 {
+  // 23. 조건문의 중첩
+  public static void section23()
+  {
+    System.out.print("Input your id?_\b");
+    Scanner sc = new Scanner(System.in);
+    String id = sc.next();
+    System.out.print("Input your password?_\b");
+    String pw = sc.next();
+    sc.close();
+
+    if(id.equals("egoing"))
+    {
+      if(pw.equals("1111"))
+      {
+        System.out.println("right");
+      }
+      else
+      {
+        System.out.println("wrong");
+      }
+    }
+    else
+    {
+      System.out.println("wrong");
+    }
+  }
+  
   // 22. 변수와 비교연산자 그리고 조건문
   public static void section22()
   {
     Scanner sc = new Scanner(System.in);
     String id = sc.next();
+    sc.close();
 
     //[Original] String id = args[0];
     //[Exercise] String id = "egoing";
