@@ -5,7 +5,38 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter07.section14();
+    Chapter08.section15();
+  }
+}
+
+// 08 - 연산자 
+class Chapter08
+{
+  // 15. 산술 연산자
+  public static void section15()
+  {
+    int result = 1 + 2;
+    System.out.println(result);
+
+    result = result - 1;
+    System.out.println(result);
+
+    result = result * 2;
+    System.out.println(result);
+
+    result = result / 2;
+    System.out.println(result);
+
+    result = (result + 8) % 7;
+    System.out.println(result);
+
+    String first = "This is";
+    String second = " a concatenated string.";
+    String third = first + second;
+    System.out.println(third);
+    // Error
+    // third = third - second;
+    // System.out.println(third);
   }
 }
 
