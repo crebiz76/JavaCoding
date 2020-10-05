@@ -5,7 +5,31 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter05.section11();
+    Chapter06.section12();
+  }
+}
+
+// 06 - 상수의 데이터 타입
+class Chapter06
+{
+  // 12. 상수의 데이터 타입
+  public static void section12()
+  {
+    //int a = 2.2;  // 실수 default(double)
+    double a = 2.2; 
+    // float b = 2.2;
+    float b = 2.2F;
+    // long c = 2147483648; // 정수 default(int)
+    long c = 2147483648L;
+    // byte d = 300;
+    byte d = 100;
+    short e = 200;
+
+    System.out.println(a);
+    System.out.println(b);
+    System.out.println(c);
+    System.out.println(d);
+    System.out.println(e);
   }
 }
 
