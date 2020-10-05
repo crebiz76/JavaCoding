@@ -6,7 +6,31 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter10.section24();
+    Chapter11.section25();
+  }
+}
+
+// 11 - 논리 연산자 
+class Chapter11
+{
+  // 25. AND 연산자 
+  public static void section25()
+  {
+    System.out.print("Input your id?_\b");
+    Scanner sc = new Scanner(System.in);
+    String id = sc.next();
+    System.out.print("Input your password?_\b");
+    String pw = sc.next();
+    sc.close();
+
+    if(id.equals("egoing") && pw.equals("1111"))
+    {
+      System.out.println("right");
+    }
+    else
+    {
+      System.out.println("wrong");
+    }
   }
 }
 
