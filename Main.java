@@ -3,7 +3,22 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter02.section3();
+    Chapter03.section4();
+  }
+}
+
+// 03 - 변수
+class Chapter03
+{
+  // 4. 변수의 선언과 할당
+  public static void section4()
+  {
+    int a;
+    a = 1;
+    System.out.println(a+1);
+
+    a = 2;
+    System.out.println(a+1);
   }
 }
 
