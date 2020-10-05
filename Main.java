@@ -3,13 +3,20 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter04.section8();
+    Chapter04.section9();
   }
 }
 
 // 04 - 주석과 세미콜론
 class Chapter04
 {
+  // 9. 주석과 세미콜론 - Quiz 
+  public static void section9()
+  {
+    // Self-test
+    System.out.println("Quiz");
+  }
+  
   // 8. 주석과 세미콜론
   public static void section8()
   {
