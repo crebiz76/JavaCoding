@@ -5,13 +5,27 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter08.section15();
+    Chapter08.section16();
   }
 }
 
 // 08 - 연산자 
 class Chapter08
 {
+  // 16. 형 변환
+  public static void section16()
+  {
+    int a = 10;
+    int b = 3;
+
+    float c = 10.0F;
+    float d = 3.0F;
+
+    System.out.println(a/b);  // 정수/정수
+    System.out.println(c/d);  // 실수/정수
+    System.out.println(a/d);  // 정수/실수 
+  }
+
   // 15. 산술 연산자
   public static void section15()
   {
