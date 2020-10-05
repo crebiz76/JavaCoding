@@ -1,17 +1,30 @@
 // [바로실행] 생활코딩 - 자바(JAVA)
 import java.util.ArrayList; // As for Chapter05.section11
+import java.util.Scanner;   // As for Chapter10.section22
 
 class Main
 {
   public static void main(String[] args)
   {
-    Chapter10.section21();
+    Chapter10.section22();
   }
 }
 
 // 10 - 조건문
 class Chapter10
 {
+  // 22. 변수와 비교연산자 그리고 조건문
+  public static void section22()
+  {
+    Scanner sc = new Scanner(System.in);
+    String id = sc.next();
+
+    //[Original] String id = args[0];
+    //[Exercise] String id = "egoing";
+    if(id.equals("egoing")) System.out.println("right");
+    else                    System.out.println("wrong");
+  }
+  
   // 21. 조건문 else
   public static void section21()
   {
