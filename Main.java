@@ -6,13 +6,26 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter12.section31();
+    Chapter12.section32();
   }
 }
 
 // 12 - 반복문
 class Chapter12
 {
+  // 32. 반복문의 중첩
+  public static void section32()
+  {
+    // 00 ~ 99
+    for (int i = 0; i < 10; i++)
+    {
+      for (int j = 0; j < 10; j++)
+      {
+        System.out.println(i + "" + j);
+      }
+    }
+  }
+  
   // 31. 반복문의 제어
   public static void section31()
   {
