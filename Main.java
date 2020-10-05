@@ -6,13 +6,33 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter12.section29();
+    Chapter12.section30();
   }
 }
 
 // 12 - 반복문
 class Chapter12
 {
+  // 30. 반복문이 없다면
+  public static void section30()
+  {
+      System.out.println("Coding Everybody0");
+      System.out.println("Coding Everybody1");
+      System.out.println("Coding Everybody2");
+      System.out.println("Coding Everybody3");
+      System.out.println("Coding Everybody4");
+      System.out.println("Coding Everybody5");
+      System.out.println("Coding Everybody6");
+      System.out.println("Coding Everybody7");
+      System.out.println("Coding Everybody8");
+      System.out.println("Coding Everybody9");
+
+      // for(int i = 0; i < 10; i++)
+      // {
+      //   System.out.println("Coding Everybody" + i);
+      // }
+  }
+
   // 29. for 문 
   public static void section29()
   {
