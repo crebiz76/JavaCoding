@@ -3,7 +3,22 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter03.section7();
+    Chapter04.section8();
+  }
+}
+
+// 04 - 주석과 세미콜론
+class Chapter04
+{
+  // 8. 주석과 세미콜론
+  public static void section8()
+  {
+    // Self-test
+    // comment
+    /*
+      comments
+    */
+    System.out.println("주석과 세미콜론");
   }
 }
 
