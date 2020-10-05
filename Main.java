@@ -5,13 +5,20 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter08.section17();
+    Chapter08.section18();
   }
 }
 
 // 08 - 연산자 
 class Chapter08
 {
+  // 18. 연산의 우선순위
+  public static void section18()
+  {
+    int a = 4 - 3 * 6;
+    System.out.println(a);
+  }
+  
   // 17. 단항 연산자
   public static void section17()
   {
