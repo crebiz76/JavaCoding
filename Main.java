@@ -5,13 +5,22 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter10.section20();
+    Chapter10.section21();
   }
 }
 
 // 10 - 조건문
 class Chapter10
 {
+  // 21. 조건문 else
+  public static void section21()
+  {
+    if(false) System.out.println(1);      // dead code
+    else if(true) System.out.println(2);  
+    else if(true) System.out.println(3);  // dead code
+    else System.out.println(4);           // dead code
+  }
+  
   // 20. 조건문 if
   public static void section20()
   {
