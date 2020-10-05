@@ -5,7 +5,25 @@ class Main
 {
   public static void main(String[] args)
   {
-    Chapter06.section12();
+    Chapter07.section13();
+  }
+}
+
+// 07 - 형 변환
+class Chapter07
+{
+  // 13. 형 변환
+  public static void section13()
+  {
+    double a = 3.0F;
+    int b = 3;
+    float c = 1.0F;
+    double d = b + c;
+
+    System.out.println(a);
+    System.out.println(b);
+    System.out.println(c);
+    System.out.println(d);
   }
 }
 
