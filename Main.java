@@ -7,13 +7,24 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter15.section44();
+		Chapter15.section45(args);
 	}
 }
 
 // 15 - 입력과 출력
 class Chapter15
 {
+	// 45. 앱이 시작할 때 데이터를 입력
+	// Chapter15.section45(args);
+	public static void section45(String[] s)
+	{
+		System.out.println(s.length);
+		for(String e: s)
+		{
+			System.out.println(e);
+		}
+	}
+	
 	// 44. 입력과 출력
 	public static void section44()
 	{
