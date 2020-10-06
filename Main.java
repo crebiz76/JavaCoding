@@ -7,8 +7,17 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		String[] members = Chapter14.section43_2();
-		System.out.println(members);
+		Chapter15.section44();
+	}
+}
+
+// 15 - 입력과 출력
+class Chapter15
+{
+	// 44. 입력과 출력
+	public static void section44()
+	{
+	System.out.println("I/O");
 	}
 }
 
