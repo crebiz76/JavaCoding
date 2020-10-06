@@ -8,7 +8,7 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter18.section55();
+		Chapter18.section56();
 	}
 }
 
@@ -42,12 +42,28 @@ class Calculator2
 // 18 - 클래스 멤버와 인스턴스 멤버
 class Chapter18
 {
+	// 56. 클래스 변수 
+	public static void section56()
+	{
+		Calculator2 c1 = new Calculator2();
+		c1.setOperands(10, 20);
+		c1.sum();
+
+		Calculator2 c2 = new Calculator2();
+		c2.setOperands(20, 40);
+		c2.sum();
+
+		Calculator2.base = 10;
+		c1.sum();
+		c2.sum();
+	}
+
 	// 55. 멤버
 	public static void section55()
 	{
 	Calculator2 c1 = new Calculator2();
-	System.out.println(c1.PI);
-	System.out.println(c1.base);
+	// System.out.println(c1.PI);
+	// System.out.println(c1.base);
 
 	System.out.println(Calculator2.PI);
 	System.out.println(Calculator2.base);
