@@ -156,7 +156,7 @@ class Chapter11
 	// 27. NOT 연산자 
 	public static void section27()
 	{
-		if(!true) System.out.println("False");
+		// if(!true) System.out.println("False");
 		if(!false) System.out.println("True");
 	}
 	
@@ -277,10 +277,11 @@ class Chapter10
 	// 21. 조건문 else
 	public static void section21()
 	{
-		if(false) System.out.println(1);      // dead code
-		else if(true) System.out.println(2);  
-		else if(true) System.out.println(3);  // dead code
-		else System.out.println(4);           // dead code
+		// if(false) System.out.println(1);      // dead code
+		// else if(true) System.out.println(2);  
+		// else if(true) System.out.println(3);  // dead code
+		// else System.out.println(4);           // dead code
+		if(true) System.out.println(2); 
 	}
 
 	// 20. 조건문 if
@@ -288,16 +289,12 @@ class Chapter10
 	{
 		if(true)
 		{
-		System.out.println("1st if condition is True");
+			System.out.println("1st if condition is True.");
 		}
 
-		if(false)
+		if(!false)
 		{
-		System.out.println();
-		}
-		else
-		{
-		System.out.println("2nd if condition is false");
+			System.out.println("2nd if condition is not false.");
 		}
 	}
 }
@@ -309,11 +306,11 @@ class Chapter09
 	public static void section19()
 	{
 		System.out.println(1==2);   //F
-		System.out.println(1==1);   //T
+		// System.out.println(1==1);   //T
 		System.out.println();
 
 		System.out.println(1!=2);   //T
-		System.out.println(1!=1);   //F
+		// System.out.println(1!=1);   //F
 		System.out.println();
 
 		System.out.println(10>20);  //F
