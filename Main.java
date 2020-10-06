@@ -7,13 +7,24 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter13.section37();
+		Chapter13.section38();
 	}
 }
 
 // 13 - 배열
 class Chapter13
 {
+	// 38. 배열의 오류와 한계
+	public static void section38()
+	{
+		String[] members = new String[3];
+		members[0] = "최진혁";
+		members[1] = "최유빈";
+		members[2] = "한이람";
+		// members[3] = "이고잉"; // java.lang.ArrayIndexOutOfBoundsException
+		System.out.println("No error");
+	}
+
 	// 37. for-each 문
 	public static void section37()
 	{
