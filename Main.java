@@ -8,7 +8,49 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter17.section53();
+		Chapter18.section55();
+	}
+}
+
+// 18 - Calculator2 예제
+class Calculator2
+{
+  // class 변수
+  static double PI = 3.14;
+  static int base = 0;
+
+  // instance 변수
+  int left, right;
+
+  public void setOperands(int left, int right)
+  {
+    this.left = left;
+    this.right = right;
+  }
+
+  public void sum()
+  {
+    System.out.println(this.left + this.right + base);
+  }
+
+  public void avg()
+  {
+    System.out.println((this.left + this.right + base)/2);
+  }
+}
+
+// 18 - 클래스 멤버와 인스턴스 멤버
+class Chapter18
+{
+	// 55. 멤버
+	public static void section55()
+	{
+	Calculator2 c1 = new Calculator2();
+	System.out.println(c1.PI);
+	System.out.println(c1.base);
+
+	System.out.println(Calculator2.PI);
+	System.out.println(Calculator2.base);
 	}
 }
 
