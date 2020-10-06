@@ -7,13 +7,23 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		System.out.println(Chapter14.section43_1(1));
+		String[] members = Chapter14.section43_2();
+		System.out.println(members);
 	}
 }
 
 // 14 - 메서드 
 class Chapter14
 {
+	// 43-2. 메서드의 출력값(return)
+	// String[] member = Chapter14.section43_2();
+	// System.out.println(members);
+	public static String[] section43_2()
+	{
+		String[] members = {"최진혁", "최유빈", "한이람", "이고잉"};
+		return members;
+	}
+	
 	// 43-1. 메서드의 출력값(return)
 	//System.out.println(Chapter14.section43_1(1));
 	public static String section43_1(int i)
