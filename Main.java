@@ -8,14 +8,40 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter17.section51_2(10, 20);
-		Chapter17.section51_2(20, 40);
+		Chapter17.section52();
 	}
 }
 
 // 17 - 클래스와 인스턴스 그리고 객체
 class Chapter17
 {
+	// 52. 객체화1
+	public static void section52()
+	{
+		int left, right;
+		left = 10; right = 20;
+		section51_2(left, right); //sum
+		section51_3(left, right); //average
+	
+		left = 20; right = 40;
+		section51_2(left, right); //sum
+		section51_3(left, right); //average
+	}
+
+	// 51-3. 클래스와 인스턴스 이전의 프로그래밍
+	// int left, right;
+	// left = 10; right = 20;
+	// Chapter17.section51_2(left, right); //sum
+	// Chapter17.section51_3(left, right); //average
+
+	// left = 20; right = 40;
+	// Chapter17.section51_2(left, right); //sum
+	// Chapter17.section51_3(left, right); //average
+	public static void section51_3(int left, int right)
+	{
+		System.out.println((left + right)/2);
+	}
+	
 	// 51-2. 클래스와 인스턴스 이전의 프로그래밍
 	// Chapter17.section51_2(10, 20);
 	// Chapter17.section51_2(20, 40);
