@@ -7,13 +7,24 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter14.section39();
+		Chapter14.section40();
 	}
 }
 
 // 14 - 메서드 
 class Chapter14
 {
+	// 40. 메서드의 정의와 호출
+	public static void section40()
+	{
+		int i = 0;
+		while(i < 5)
+		{
+			System.out.println(i);
+			i++;
+		}
+	}
+	
 	// 39. 메서드 
 	public static void section39()
 	{
