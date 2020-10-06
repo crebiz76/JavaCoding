@@ -7,13 +7,23 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter15.section45(args);
+		Chapter15.section46_1(args);
 	}
 }
 
 // 15 - 입력과 출력
 class Chapter15
 {
+	// 46-1. 앱이 실행 중에 데이터를 입력
+	// Chapter15.section46_1(args);
+	public static void section46_1(String[] s)
+	{
+		Scanner sc = new Scanner(System.in);
+		int i = sc.nextInt();
+		System.out.println(i*1000);
+		sc.close();
+	}
+	
 	// 45. 앱이 시작할 때 데이터를 입력
 	// Chapter15.section45(args);
 	public static void section45(String[] s)
