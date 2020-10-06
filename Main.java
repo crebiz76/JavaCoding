@@ -7,13 +7,23 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter13.section36();
+		Chapter13.section37();
 	}
 }
 
 // 13 - 배열
 class Chapter13
 {
+	// 37. for-each 문
+	public static void section37()
+	{
+		String[] members =  {"최진혁", "최유빈", "한이람", "이고잉"};
+		for(String e:members)
+		{
+			System.out.println(e + "이(가) 출석했습니다. ");
+		}
+	}
+	
 	// 36. 배열의 사용
 	public static void section36()
 	{
