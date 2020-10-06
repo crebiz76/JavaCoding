@@ -8,13 +8,49 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter17.section52();
+		Chapter17.section53();
+	}
+}
+
+// 17 - Calculator 예제
+class Calculator
+{
+	int left, right;
+
+	public void setOperands(int left, int right)
+	{
+		this.left = left;
+		this.right = right;
+	}
+
+	public void sum()
+	{
+		System.out.println(this.left + this.right);
+	}
+
+	public void avg()
+	{
+		System.out.println((this.left + this.right)/2);
 	}
 }
 
 // 17 - 클래스와 인스턴스 그리고 객체
 class Chapter17
 {
+	// 53. 객체화2
+	public static void section53()
+	{
+		Calculator c1 = new Calculator();
+		c1.setOperands(10, 20);
+		c1.sum();
+		c1.avg();
+
+		Calculator c2 = new Calculator();
+		c2.setOperands(20, 40);
+		c2.sum();
+		c2.avg();
+	}
+	
 	// 52. 객체화1
 	public static void section52()
 	{
