@@ -8,7 +8,18 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter16.section50();
+		Chapter17.section51_1();
+	}
+}
+
+// 17 - 클래스와 인스턴스 그리고 객체
+class Chapter17
+{
+	// 51-1. 클래스와 인스턴스 이전의 프로그래밍
+	public static void section51_1()
+	{
+		System.out.println(10 + 20);
+		System.out.println(20 + 40);
 	}
 }
 
