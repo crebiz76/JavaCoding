@@ -7,10 +7,19 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter13.section38();
+		Chapter14.section39();
 	}
 }
 
+// 14 - 메서드 
+class Chapter14
+{
+	// 39. 메서드 
+	public static void section39()
+	{
+		System.out.println("No code");
+	}
+}
 // 13 - 배열
 class Chapter13
 {
@@ -248,11 +257,11 @@ class Chapter10
 		{
 			if(pw.equals("1111"))
 			{
-			System.out.println("right");
+				System.out.println("right");
 			}
 			else
 			{
-			System.out.println("wrong");
+				System.out.println("wrong");
 			}
 		}
 		else
