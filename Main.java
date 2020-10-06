@@ -8,13 +8,22 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter16.section49();
+		Chapter16.section50();
 	}
 }
 
 // 16 - 객체 지향 프로그래밍
 class Chapter16
 {
+	// 50. 부품화
+	public static void section50()
+	{
+		System.out.println("[부품화의 장점]");
+		System.out.println("1. 은닉화/Information Hiding");
+		System.out.println("2. 캡슐화/Encapsulation");
+		System.out.println("3. 인터페이스/Interface");
+	}
+	
 	// 49. 추상화
 	public static void section49()
 	{
