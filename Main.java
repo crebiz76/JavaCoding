@@ -8,7 +8,40 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter18.section57();
+		Chapter18.section58();
+	}
+}
+
+class C1
+{
+	// class member
+	static int static_variable = 1;
+	// instance member
+	int instance_variable = 2;
+	
+	// class method -> static member access(O)
+	static void static_static()
+	{
+		System.out.println(static_variable);
+	}
+
+	// class method -> instance member access(X)
+	static void static_instance()
+	{
+		// System.out.println(instance_variable);
+		System.out.println("-");
+	}
+
+	// instance method -> class member access(O)
+	void instance_static()
+	{
+		System.out.println(static_variable);
+	}
+
+	// instance method -> instance member access(O)
+	void instance_instance()
+	{
+		System.out.println(instance_variable);
 	}
 }
 
@@ -57,6 +90,66 @@ class Calculator2
 // 18 - 클래스 멤버와 인스턴스 멤버
 class Chapter18
 {
+	// 58. 멤버 타입의 비교
+	// 1) 인스턴스 메서드는 클래스 멤버에 접근할 수 있다. 
+	// 2) 클래스 매서드는 인스턴스 멤버에 접근할 수 없다. 
+	public static void section58()
+	{
+		C1 c = new C1();
+
+		System.out.printf("c.static_static() -> ");
+		// c.static_static();
+		System.out.printf("\n");
+		// 인스턴스를 이용해서 정적 메소드에 접근 -> 성공
+		// 정적 메서드가 정적 변수에 접근 -> 성공
+		// No Error, but Warning
+		
+		System.out.printf("c.static_instance() -> ");
+		// c.static_instance();
+		System.out.printf("\n");
+		// 인스턴스를 이용해서 정적 메서드에 접근 -> 성공
+		// 정적 메서드가 인스턴스 변수에 접근 -> 실패
+		// No Error, but Warning
+		
+		System.out.printf("c.instance_static() -> ");
+		c.instance_static();
+		// 인스턴스를 이용해서 인스턴스 메소드에 접근 -> 성공
+		// 인스턴스 메서드가 클래스 변수에 접근 -> 성공
+		// OK
+		
+		System.out.printf("c.instance_instance -> ");
+		c.instance_instance();
+		// 인스턴스를 이용해서 인스턴스 메소드에 접근 -> 성공
+		// 인스턴스 메서드가 인스턴스 변수에 접근 -> 성공
+		// OK
+		
+		System.out.printf("C1.static_static -> ");
+		C1.static_static();
+		// 클래스를 이용해서 정적 매서드에 접근 -> 성공
+		// 정적 메서드가 클래스 변수에 접근 -> 성공 
+		// OK
+		
+		System.out.printf("C1.static_instance -> ");
+		C1.static_instance();
+		// 클래스를 이용해서 정적 매서드에 접근 -> 성공
+		// 정적 메서드가 인스턴스 변수에 접근 -> 실패 
+		// Error
+		
+		System.out.printf("C1.instance_static -> ");
+		// C1.instance_static();
+		System.out.printf("\n");
+		// 클래스를 이용해서 인스턴스 매서드에 접근 -> 실패
+		// 인스턴스 메서드가 정적 변수에 접근 -> 성공
+		// Error 
+		
+		System.out.printf("C1.instance_instance -> ");
+		// C1.instance_instance();
+		System.out.printf("\n");
+		// 클래스를 이용해서 인스턴스 매서드에 접근 -> 실패
+		// 인스턴스 메서드가 인스턴스 변수에 접근 -> 성공
+		// Error 
+	}
+
 	// 57. 클래스 메서드
 	public static void section57()
 	{
@@ -89,7 +182,8 @@ class Chapter18
 		Calculator2 c1 = new Calculator2();
 		// System.out.println(c1.PI);
 		// System.out.println(c1.base);
-
+		System.out.println(c1);
+		
 		System.out.println(Calculator2.PI);
 		System.out.println(Calculator2.base);
 	}
