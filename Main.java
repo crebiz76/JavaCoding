@@ -8,41 +8,66 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter18.section56();
+		Chapter18.section57();
+	}
+}
+
+// 18 - Calculator3 예제
+class Calculator3
+{
+	// Class 메서드
+	public static void sum(int left, int right)
+	{
+		System.out.println(left+right);
+	}
+
+	public static void avg(int left, int right)
+	{
+		System.out.println((left+right)/2);
 	}
 }
 
 // 18 - Calculator2 예제
 class Calculator2
 {
-  // class 변수
-  static double PI = 3.14;
-  static int base = 0;
+	// class 변수
+	static double PI = 3.14;
+	static int base = 0;
 
-  // instance 변수
-  int left, right;
+	// instance 변수
+	int left, right;
 
-  public void setOperands(int left, int right)
-  {
-    this.left = left;
-    this.right = right;
-  }
+	public void setOperands(int left, int right)
+	{
+		this.left = left;
+		this.right = right;
+	}
 
-  public void sum()
-  {
-    System.out.println(this.left + this.right + base);
-  }
+	public void sum()
+	{
+		System.out.println(this.left + this.right + base);
+	}
 
-  public void avg()
-  {
-    System.out.println((this.left + this.right + base)/2);
-  }
+	public void avg()
+	{
+		System.out.println((this.left + this.right + base)/2);
+	}
 }
 
 // 18 - 클래스 멤버와 인스턴스 멤버
 class Chapter18
 {
-	// 56. 클래스 변수 
+	// 57. 클래스 메서드
+	public static void section57()
+	{
+		Calculator3.sum(10, 20);
+		Calculator3.avg(10, 20);
+
+		Calculator3.sum(20, 40);
+		Calculator3.avg(20, 40);
+	}
+
+	// 56. 클래스 변수
 	public static void section56()
 	{
 		Calculator2 c1 = new Calculator2();
@@ -61,12 +86,12 @@ class Chapter18
 	// 55. 멤버
 	public static void section55()
 	{
-	Calculator2 c1 = new Calculator2();
-	// System.out.println(c1.PI);
-	// System.out.println(c1.base);
+		Calculator2 c1 = new Calculator2();
+		// System.out.println(c1.PI);
+		// System.out.println(c1.base);
 
-	System.out.println(Calculator2.PI);
-	System.out.println(Calculator2.base);
+		System.out.println(Calculator2.PI);
+		System.out.println(Calculator2.base);
 	}
 }
 
