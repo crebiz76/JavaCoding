@@ -14,6 +14,35 @@ class Main
 // 14 - 메서드 
 class Chapter14
 {
+	// 41. 메서드가 없다면
+	public static void section41()
+	{
+		// 재활용, 코드량 , 유지보수
+		int i = 0;
+		while(i < 5)
+		{
+			System.out.print(i+" ");
+			i++;
+		}
+		System.out.println();
+
+		i = 0;
+		while(i < 5)
+		{
+			System.out.print(i+" ");
+			i++;
+		}
+		System.out.println();
+
+		i = 0;
+		while(i < 5)
+		{
+			System.out.print(i+" ");
+			i++;
+		}
+		System.out.println();
+	}
+	
 	// 40. 메서드의 정의와 호출
 	public static void section40()
 	{
