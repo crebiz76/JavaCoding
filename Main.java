@@ -7,13 +7,23 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter14.section42(1,5);
+		System.out.println(Chapter14.section43_1(1));
 	}
 }
 
 // 14 - 메서드 
 class Chapter14
 {
+	// 43-1. 메서드의 출력값(return)
+	//System.out.println(Chapter14.section43_1(1));
+	public static String section43_1(int i)
+	{
+		if(i == 0) return "zero";
+		else if(i == 1) return "one";
+		else if(i == 2) return "two";
+		return "none";
+	}
+	
 	// 42. 메서드의 입력값
 	//Chapter14.section42(1,5);
 	public static void section42(int init, int limit)
