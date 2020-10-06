@@ -8,7 +8,17 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter15.section47();
+		Chapter16.section48();
+	}
+}
+
+// 16 - 객체 지향 프로그래밍
+class Chapter16
+{
+	// 48. 객체 지향 프로그래밍
+	public static void section48()
+	{
+		System.out.println("Object-Oriented Programming");
 	}
 }
 
