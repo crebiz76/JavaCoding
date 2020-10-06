@@ -8,13 +8,19 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter16.section48();
+		Chapter16.section49();
 	}
 }
 
 // 16 - 객체 지향 프로그래밍
 class Chapter16
 {
+	// 49. 추상화
+	public static void section49()
+	{
+		System.out.println("설계 추상화/Design Abstract");
+	}
+
 	// 48. 객체 지향 프로그래밍
 	public static void section48()
 	{
