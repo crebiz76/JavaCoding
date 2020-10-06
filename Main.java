@@ -6,8 +6,20 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter12.section32();
+		Chapter13.section33();
 	}
+}
+
+// 13 - 배열
+class Chapter13
+{
+  // 33. 배열
+  public static void section33()
+  {
+    // self-test
+    int[] numbers = {5, 2, 1, 6, 7};
+    System.out.println(numbers);
+  }
 }
 
 // 12 - 반복문
