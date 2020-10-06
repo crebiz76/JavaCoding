@@ -7,13 +7,28 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter13.section34();
+		Chapter13.section35();
 	}
 }
 
 // 13 - 배열
 class Chapter13
 {
+	// 35. 배열의 제어
+	public static void section35()
+	{
+		String[] classGroup = new String[4];
+		System.out.println(classGroup.length);
+		classGroup[0] = "최진혁";
+		System.out.println(classGroup.length);
+		classGroup[1] = "최유빈";
+		System.out.println(classGroup.length);
+		classGroup[2] = "한이람";
+		System.out.println(classGroup.length);
+		classGroup[3] = "이고잉";
+		System.out.println(classGroup.length);
+	}
+
 	// 34. 배열의 개념
 	public static void section34()
 	{
