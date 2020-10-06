@@ -7,13 +7,24 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter13.section35();
+		Chapter13.section36();
 	}
 }
 
 // 13 - 배열
 class Chapter13
 {
+	// 36. 배열의 사용
+	public static void section36()
+	{
+		String[] members =  {"최진혁", "최유빈", "한이람", "이고잉"};
+		for(int i = 0; i < members.length; i++)
+		{
+			String member = members[i];
+			System.out.println(member + "이(가) 출석했습니다. ");
+		}
+	}
+
 	// 35. 배열의 제어
 	public static void section35()
 	{
