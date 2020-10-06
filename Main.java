@@ -37,6 +37,14 @@ class Calculator
 // 17 - 클래스와 인스턴스 그리고 객체
 class Chapter17
 {
+	// 54. 객체화3
+	public static void section54()
+	{
+		System.out.println("Calculator - 오브젝트(설계도/클래스 타입)");
+		System.out.println("c1 - 인스턴스/객체(상태/변수, 행위/메서드)");
+		System.out.println("c2 - 인스턴스/객체(상태/변수, 행위/메서드)");
+	}
+	
 	// 53. 객체화2
 	public static void section53()
 	{
