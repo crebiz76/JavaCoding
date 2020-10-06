@@ -1,25 +1,33 @@
 // [바로실행] 생활코딩 - 자바(JAVA)
 import java.util.ArrayList; // As for Chapter05.section11
 import java.util.Scanner;   // As for Chapter10.section22
+import java.util.Arrays;    // As for Chapter13.section34
 
 class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter13.section33();
+		Chapter13.section34();
 	}
 }
 
 // 13 - 배열
 class Chapter13
 {
-  // 33. 배열
-  public static void section33()
-  {
-    // self-test
-    int[] numbers = {5, 2, 1, 6, 7};
-    System.out.println(numbers);
-  }
+	// 34. 배열의 개념
+	public static void section34()
+	{
+		String[] classGroup = {"최진혁", "최유빈", "한이람", "이고잉"};
+		System.out.println(Arrays.toString(classGroup));
+	}
+
+	// 33. 배열
+	public static void section33()
+	{
+		// self-test
+		int[] numbers = {5, 2, 1, 6, 7};
+		System.out.println(Arrays.toString(numbers));
+	}
 }
 
 // 12 - 반복문
