@@ -7,13 +7,25 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter14.section40();
+		Chapter14.section42(1,5);
 	}
 }
 
 // 14 - 메서드 
 class Chapter14
 {
+	// 42. 메서드의 입력값
+	//Chapter14.section42(1,5);
+	public static void section42(int init, int limit)
+	{
+		int i = init;
+		while(i < limit)
+		{
+			System.out.println(i);
+			i++;
+		}
+	}
+	
 	// 41. 메서드가 없다면
 	public static void section41()
 	{
