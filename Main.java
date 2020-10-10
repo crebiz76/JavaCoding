@@ -8,14 +8,51 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter19.section61_1();
+		Chapter19.section62();
+	}
+}
+
+// 19 - 유효 범위(예제)
+class C
+{
+	int v = 10;
+	void m()
+	{
+		int v = 20;
+		System.out.println(v);
+		System.out.println(this.v);
 	}
 }
 
 // 19 - 유효 범위
 class Chapter19
 {
-    // 61-1. 다양한 유효범위들 
+	// 62. 인스턴스의 유효범위
+	public static void section62()
+	{
+		C c1 = new C();
+		c1.m();
+	}
+
+    static int n = 5;
+    static void a()
+    {
+        int n = 10;
+        b();
+    }
+
+    static void b()
+    {
+        System.out.println(n);
+    }
+
+    // 61-2. 다양한 유효범위들
+    public static void section61_2()
+    {
+        b();
+	}
+	
+	// 61-1. 다양한 유효범위들 
     public static void section61_1()
     {
         a3();
