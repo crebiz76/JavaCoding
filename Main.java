@@ -8,14 +8,32 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter19.section59();
+		Chapter19.section60();
 	}
 }
 
 // 19 - 유효 범위
 class Chapter19
 {
-    // 59. 유효 범위
+    // 60. 전역변수와 지역변수 
+    static int i;   // 전역 변수(i)
+    public static void section60()
+    {   
+        // 지역변수(i)
+        for(i = 0; i < 5; i++)
+        {
+            a2();
+            System.out.println(i);
+        }
+    }
+    
+    // 60. 전역변수와 지역변수(예제 포함)
+    static void a2()
+    {
+        i = 0;
+	}
+	
+	// 59. 유효 범위
     public static void section59()
     {   
         for (int i = 0; i < 5; i++)
