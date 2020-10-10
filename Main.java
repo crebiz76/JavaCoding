@@ -8,10 +8,32 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter18.section58();
+		Chapter19.section59();
 	}
 }
 
+// 19 - 유효 범위
+class Chapter19
+{
+    // 59. 유효 범위
+    public static void section59()
+    {   
+        for (int i = 0; i < 5; i++)
+        {
+            a1();
+            System.out.println(i);
+        }
+    }
+
+    // 59. 유효 범위(예제 포함)
+    static void a1()
+    {
+        int i = 0;
+        // System.out.println(i);
+    }
+}
+
+// 18 - 클래스 멤버와 인스턴스 멤버(예제)
 class C1
 {
 	// class member
