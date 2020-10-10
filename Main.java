@@ -8,14 +8,38 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter19.section60();
+		Chapter19.section61_1();
 	}
 }
 
 // 19 - 유효 범위
 class Chapter19
 {
-    // 60. 전역변수와 지역변수 
+    // 61-1. 다양한 유효범위들 
+    public static void section61_1()
+    {
+        a3();
+        a4();
+        // System.out.println(title);
+        // System.out.println(i);
+    }
+
+    // 61-1. 다양한 유효범위들(예제 포함)
+    static void a3()
+    {
+        String title = "coding everyday";
+    }
+
+    // 61-1. 다양한 유효범위들(예제 포함)
+    static void a4()
+    {
+        for(int i = 0; i < 5; i++)
+        {
+            System.out.println(i);
+        }
+	}
+	
+	// 60. 전역변수와 지역변수 
     static int i;   // 전역 변수(i)
     public static void section60()
     {   
