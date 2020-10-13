@@ -8,7 +8,7 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter21.section65();
+		Chapter21.section66();
 	}
 }
 
@@ -21,9 +21,38 @@ class SubstractAbleCalculator extends Calculator
 	}
 }
 
+class MultiplicationAbleCalculator extends SubstractAbleCalculator
+{
+	public void multiplication()
+	{
+		System.out.println(this.left * this.right);
+	}
+}
+
+class DivisionAbleCalculator extends MultiplicationAbleCalculator
+{
+	public void division()
+	{
+		System.out.println(this.left / this.right);
+	}
+}
+
 // 21 - 상속
 class Chapter21
 {
+	// 65. 다양한 종류의 상속
+	public static void section66()
+    {
+		// Case 2		
+		DivisionAbleCalculator c1 = new DivisionAbleCalculator();
+		c1.setOperands(10, 20);
+		c1.sum();
+		c1.avg();
+		c1.substract();
+		c1.multiplication();
+		c1.division();
+	}
+
 	// 64. 상속의 개념
     public static void section65()
     {
