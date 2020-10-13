@@ -8,8 +8,45 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter19.section62();
+		Chapter20.section63();
 	}
+}
+
+// 20 - 초기화와 생성자(예제)
+class Calculator20
+{
+    int left, right;
+
+    public Calculator20(int left, int right)
+    {
+        this.left = left;
+        this.right = right;
+    }
+
+    public void sum()
+    {
+        System.out.println(this.left + this.right);
+    }
+
+    public void avg()
+    {
+        System.out.println((this.left + this.right)/2);
+    }
+}
+
+// 20 - 초기화와 생성자
+class Chapter20
+{
+    public static void section63()
+    {
+        Calculator20 c1 = new Calculator20(10, 20);
+        c1.sum();
+        c1.avg();
+
+        Calculator20 c2 = new Calculator20(20, 40);
+        c2.sum();
+        c2.avg();
+    }
 }
 
 // 19 - 유효 범위(예제)
@@ -37,7 +74,8 @@ class Chapter19
     static int n = 5;
     static void a()
     {
-        int n = 10;
+		int n = 10;
+		n = n + 1;
         b();
     }
 
@@ -64,7 +102,8 @@ class Chapter19
     // 61-1. 다양한 유효범위들(예제 포함)
     static void a3()
     {
-        String title = "coding everyday";
+		String title = "coding everyday";
+		title = title + "!";
     }
 
     // 61-1. 다양한 유효범위들(예제 포함)
@@ -107,7 +146,8 @@ class Chapter19
     // 59. 유효 범위(예제 포함)
     static void a1()
     {
-        int i = 0;
+		int i = 0;
+		i = i + 1;
         // System.out.println(i);
     }
 }
