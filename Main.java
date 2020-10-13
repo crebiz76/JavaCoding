@@ -8,13 +8,33 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter21.section64();
+		Chapter21.section65();
+	}
+}
+
+// 21 - 상속(예제)
+class SubstractAbleCalculator extends Calculator
+{
+	public void substract()
+	{
+		System.out.println(this.left - this.right);
 	}
 }
 
 // 21 - 상속
 class Chapter21
 {
+	// 64. 상속의 개념
+    public static void section65()
+    {
+		// Case 2		
+		SubstractAbleCalculator c1 = new SubstractAbleCalculator();
+		c1.setOperands(10, 20);
+		c1.sum();
+		c1.avg();
+		c1.substract();
+	}
+	
 	// 64. 상속의 개념
     public static void section64()
     {
@@ -23,7 +43,6 @@ class Chapter21
         c1.setOperands(10, 20);
         c1.sum();
 		c1.avg();
-		
 		substract(10, 20); 
     }
 
