@@ -8,8 +8,30 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter20.section63();
+		Chapter21.section64();
 	}
+}
+
+// 21 - 상속
+class Chapter21
+{
+	// 64. 상속의 개념
+    public static void section64()
+    {
+		// Case 1
+		Calculator c1 = new Calculator();
+        c1.setOperands(10, 20);
+        c1.sum();
+		c1.avg();
+		
+		substract(10, 20); 
+    }
+
+    public static int substract(int left, int right)
+    {
+        System.out.println("Hello");
+        return 0;
+    }
 }
 
 // 20 - 초기화와 생성자(예제)
@@ -37,6 +59,7 @@ class Calculator20
 // 20 - 초기화와 생성자
 class Chapter20
 {
+	// 63. 초기화와 생성자
     public static void section63()
     {
         Calculator20 c1 = new Calculator20(10, 20);
