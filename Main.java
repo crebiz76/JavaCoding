@@ -8,16 +8,23 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter23.section69();
+		Chapter23.section70();
 	}
 }
 
-// 23 - overriding1(예제)
-class SubstractAbleCalculator23_1 extends Calculator23_1
+// 23 - overriding(예제)
+class SubstractAbleCalculator23 extends Calculator23
 {
 	public void sum()
 	{
 		System.out.println("실행 결과는" + (this.left + this.right) + "입니다.");
+	}
+
+	public int avg()
+	{
+		// overriding 사용할 때 동일한 함수의 사용으로 중복발생하면
+		// 해당 코드는 부모 객체가 갖고 있는 avg 메서드를 사용한다. 
+		return super.avg();
 	}
 
 	public void substract()
@@ -26,14 +33,14 @@ class SubstractAbleCalculator23_1 extends Calculator23_1
     }
 }
 
-// 23 - overring1(예제)
-class Calculator23_1
+// 23 - overring(예제)
+class Calculator23
 {
 	int left, right;
 	// 그래서 기존 생성자를 만든다. 
-	public Calculator23_1(){}
+	public Calculator23(){}
 	// 매개변수가 있는 생성자만 만들게 되면 에러가 발생
-    public Calculator23_1(int left, int right)
+    public Calculator23(int left, int right)
     {
         this.left = left;
         this.right = right;
@@ -50,19 +57,44 @@ class Calculator23_1
         System.out.println(this.left + this.right);
     }
 
-    public void avg()
+    // public void avg()
+    // {
+    //     System.out.println((this.left + this.right) / 2);
+	// }
+	public int avg()
     {
-        System.out.println((this.left + this.right) / 2);
+		System.out.println("출력 결과는...");
+        return ((this.left + this.right)/2);
     }
 }
 
 // 23- overriding
 class Chapter23
 {
+	// 메서드의 이름, 매개변수의 숫자 데이터 타입, 순서
+	// 그리고 메서드의 리턴 타입이 같아야 overriding이 된다.
+	
+	// overriding을 하기 위해서는 부모클래스의 기본 기능에 
+	// 자식클래스의 기능을 필요에 따라 변경하는 것이다.
+
+	// overriding를 만든기 위해서는 부모클래스의 매서드의 시그니처와 
+	// 자식클래스의 메서드의 시그니처가 동일해야 한다. 
+
+	// 70. Overriding2
+	public static void section70()
+	{
+		SubstractAbleCalculator23 c23_2 = new SubstractAbleCalculator23();
+		c23_2.setOprands(10, 20);
+		c23_2.sum();
+		c23_2.avg();
+		System.out.println("실행 결과는" + c23_2.avg());
+		c23_2.substract();
+	}	
+	
 	// 69. Overriding1
 	public static void section69()
 	{
-		SubstractAbleCalculator23_1 c23_1 = new SubstractAbleCalculator23_1();
+		SubstractAbleCalculator23 c23_1 = new SubstractAbleCalculator23();
 		c23_1.setOprands(10, 20);
 		c23_1.sum();
 		c23_1.avg();
