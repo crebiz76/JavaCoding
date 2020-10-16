@@ -8,8 +8,34 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter21.section66();
+		Chapter22.section67();
 	}
+}
+
+// 22 - 상속과 생성자
+class Chapter22
+{
+    public Chapter22()
+    {
+        System.out.println("기본생성자");
+    }
+
+    public Chapter22(int param)
+    {
+        System.out.println(param);
+	}
+	
+	public void Learn()
+	{
+		System.out.println("Java Coding");
+	}
+
+    // 67. 기본 생성자
+    public static void section67()
+    {
+		Chapter22 ch22 = new Chapter22();
+		ch22.Learn();			
+    }
 }
 
 // 21 - 상속(예제)
@@ -40,7 +66,7 @@ class DivisionAbleCalculator extends MultiplicationAbleCalculator
 // 21 - 상속
 class Chapter21
 {
-	// 65. 다양한 종류의 상속
+	// 66. 다양한 종류의 상속
 	public static void section66()
     {
 		// Case 2		
@@ -53,7 +79,7 @@ class Chapter21
 		c1.division();
 	}
 
-	// 64. 상속의 개념
+	// 65. 코드로 알아보는 상속
     public static void section65()
     {
 		// Case 2		
