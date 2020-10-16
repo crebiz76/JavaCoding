@@ -8,8 +8,66 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter22.section68();
+		Chapter23.section69();
 	}
+}
+
+// 23 - overriding1(예제)
+class SubstractAbleCalculator23_1 extends Calculator23_1
+{
+	public void sum()
+	{
+		System.out.println("실행 결과는" + (this.left + this.right) + "입니다.");
+	}
+
+	public void substract()
+    {
+        System.out.println(this.left - this.right);
+    }
+}
+
+// 23 - overring1(예제)
+class Calculator23_1
+{
+	int left, right;
+	// 그래서 기존 생성자를 만든다. 
+	public Calculator23_1(){}
+	// 매개변수가 있는 생성자만 만들게 되면 에러가 발생
+    public Calculator23_1(int left, int right)
+    {
+        this.left = left;
+        this.right = right;
+    }
+
+    public void setOprands(int left, int right)
+    {
+        this.left = left;
+        this.right = right;
+    }
+
+    public void sum()
+    {
+        System.out.println(this.left + this.right);
+    }
+
+    public void avg()
+    {
+        System.out.println((this.left + this.right) / 2);
+    }
+}
+
+// 23- overriding
+class Chapter23
+{
+	// 69. Overriding1
+	public static void section69()
+	{
+		SubstractAbleCalculator23_1 c23_1 = new SubstractAbleCalculator23_1();
+		c23_1.setOprands(10, 20);
+		c23_1.sum();
+		c23_1.avg();
+		c23_1.substract();
+	}	
 }
 
 // 22 - 상속과 생성자(예제)
@@ -21,7 +79,7 @@ class SubstractAbleCalculator22 extends Calculator22
 		// super: 부모 클래스의 생성자        
         super(left, right);
 		// 하위 클래스의 초기화 코드는 항상 super 호츌 뒤에 두어야 한다. 
-		// 초기화 루틴 입력
+		// super 생성자 밑으로 초기화 루틴 입력할 것!
     }
 
     public void substract()
