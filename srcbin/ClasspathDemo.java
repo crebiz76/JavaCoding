@@ -1,5 +1,5 @@
 // 자동 생성 구문
-// package srcbin;
+package srcbin;
 // public class ClasspathDemo {
 // }
 

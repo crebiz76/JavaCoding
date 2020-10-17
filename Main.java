@@ -8,13 +8,19 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter25.section73();
+		Chapter25.section74();
 	}
 }
 
 // 25 - 클래스 패스
 class Chapter25
 {
+	// 73. 클래스의 경로
+	public static void section74()
+	{
+		System.out.println("74. 클래스의 경로");
+	}
+	
 	// 73. 컴파일과 클래스
 	public static void section73()
 	{
