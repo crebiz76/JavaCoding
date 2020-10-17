@@ -8,7 +8,17 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter25.section75();
+		Chapter26.section76();
+	}
+}
+
+// 26 - 패키지
+class Chapter26
+{
+	// 76. 패키지의 개념
+	public static void section76()
+	{
+		System.out.println("76. 패키지의 개념");
 	}
 }
 
