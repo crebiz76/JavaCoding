@@ -4,13 +4,30 @@ import java.util.Scanner;   // As for Chapter10.section22
 import java.util.Arrays;    // As for Chapter13.section34
 import java.io.*;           // As for Chapter15.section47
 
-import srcbin.*;			// As for Chapter26
+import srcbin.*;			// As for Chapter26.*
 
 class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter26.section79();
+		Chapter27.section80();
+	}
+}
+
+// 27 - API와 API 문서 보는 법
+class Chapter27
+{
+	// 80. API와 API 문서1
+	public static void section80()
+	{
+		// println: Method
+		// out: Field(Member)
+		// System: Class
+		System.out.println(1);
+
+		// 암시적으로 내포된 필수적인 패키지
+		// System 클래스도 java.lang의 소속이다.
+		System.out.println("import java.lang.*");
 	}
 }
 
