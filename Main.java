@@ -10,7 +10,17 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter27.section81();
+		Chapter28.section82();
+	}
+}
+
+// 28 - 접근 제어자 
+class Chapter28
+{
+	// 82. 접근 제어자
+	public static void section82()
+	{
+		System.out.println("82. 접근 제어자");
 	}
 }
 
