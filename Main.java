@@ -8,7 +8,62 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter23.section70();
+		Chapter24.section71();
+	}
+}
+
+// 24 - overloading(예제 71)
+class Calculator24_1
+{
+	int left, right;
+	int third = 0;
+
+	public void setOprands(int left, int right)
+	{
+		System.out.println("setOprands(int left, int right)");
+		this.left = left;
+		this.right = right;
+	}
+	
+	public void setOprands(int left, int right, int third)
+	{
+		System.out.println("setOprands(int left, int right, int third)");
+		this.left = left;
+		this.right = right;
+		this.third = third;
+	}
+
+	public void sum()
+	{
+		System.out.println(this.left + this.right + this.third);
+	}
+	
+	public void avg()
+	{
+		// System.out.println((this.left + this.right + this.third)/count);
+		// 코드 오류로 추가
+		int count = 0;
+		if(this.left != 0) count++;
+		if(this.right != 0) count++;
+		if(this.third != 0) count++;
+
+		System.out.println((this.left + this.right + this.third)/count);
+	}
+}
+
+// 24 - overloading
+class Chapter24
+{
+	// 71. overloading1
+	public static void section71()
+	{
+		Calculator24_1 c24_1 = new Calculator24_1();
+		c24_1.setOprands(10, 20);
+		c24_1.sum();
+		c24_1.avg();
+		c24_1.setOprands(10, 20, 30);
+		c24_1.sum();
+		c24_1.avg();
 	}
 }
 
