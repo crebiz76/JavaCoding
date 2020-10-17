@@ -4,17 +4,28 @@ import java.util.Scanner;   // As for Chapter10.section22
 import java.util.Arrays;    // As for Chapter13.section34
 import java.io.*;           // As for Chapter15.section47
 
+import srcbin.*;			// As for Chapter26
+
 class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter26.section76();
+		Chapter26.section77();
 	}
 }
 
 // 26 - 패키지
 class Chapter26
 {
+	// 77. 패키지의 사용
+	// 패키지를 만드는 조직이름이나 도메인이름을 사용하는 것이 일반적
+	// 
+	public static void section77()
+	{
+		ClasspathDemo2 pkg = new ClasspathDemo2();
+		System.out.println(pkg.getClass());
+	}
+
 	// 76. 패키지의 개념
 	public static void section76()
 	{
