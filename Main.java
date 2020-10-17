@@ -8,7 +8,17 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter24.section72();
+		Chapter25.section73();
+	}
+}
+
+// 25 - 클래스 패스
+class Chapter25
+{
+	// 73. 컴파일과 클래스
+	public static void section73()
+	{
+		System.out.println("73. 컴파일과 클래스");
 	}
 }
 
