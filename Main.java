@@ -10,13 +10,20 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter26.section78();
+		Chapter26.section79();
 	}
 }
 
 // 26 - 패키지
 class Chapter26
 {
+	// 79. 중복의 회피
+	public static void section79()
+	{
+		SelfCompile sc = new SelfCompile();
+		System.out.println(sc.getClass());
+	}
+
 	// 78. 손 컴파일
 	public static void section78()
 	{
