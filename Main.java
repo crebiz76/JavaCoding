@@ -10,18 +10,26 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter26.section77();
+		Chapter26.section78();
 	}
 }
 
 // 26 - 패키지
 class Chapter26
 {
+	// 78. 손 컴파일
+	public static void section78()
+	{
+		System.out.println("78. 손 컴파일");
+		System.out.println("javac SelfCompile.java -encoding UTF-8 -d bin");
+	}
+
 	// 77. 패키지의 사용
 	// 패키지를 만드는 조직이름이나 도메인이름을 사용하는 것이 일반적
 	// 
 	public static void section77()
 	{
+		System.out.println("77. 패키지의 사용");
 		ClasspathDemo2 pkg = new ClasspathDemo2();
 		System.out.println(pkg.getClass());
 	}
