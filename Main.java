@@ -10,13 +10,19 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter27.section80();
+		Chapter27.section81();
 	}
 }
 
 // 27 - API와 API 문서 보는 법
 class Chapter27
 {
+	// 81. API와 API 문서2
+	public static void section81()
+	{
+		System.out.println("81. API와 API 문서2");
+	}
+
 	// 80. API와 API 문서1
 	public static void section80()
 	{
