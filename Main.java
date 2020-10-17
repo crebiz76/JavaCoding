@@ -10,8 +10,31 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter28.section83();
+		Chapter28.section84();
 	}
+}
+
+class Calculator28
+{
+	private int left, right;
+	public void setOprands(int left, int right)
+	{
+		this.left = left;
+		this.right = right;
+	}
+	private int _sum()
+	{
+		return this.left + this.right;
+	}
+	public void sumDecoPlus()
+	{
+		System.out.println("++++"+_sum()+"++++");
+	}
+	public void sumDecoMinus()
+	{
+		System.out.println("----"+_sum()+"----");
+	}
+	
 }
 
 // 28 - 접근 제어자(예제 83)
@@ -36,6 +59,16 @@ class A
 // 28 - 접근 제어자 
 class Chapter28
 {
+	// 84. 접근 제어자를 사용하는 이유
+	public static void section84()
+	{
+		System.out.println("84. 접근 제어자를 사용하는 이유");
+		Calculator28 c28 = new Calculator28();
+		c28.setOprands(10, 20);
+		c28.sumDecoPlus();
+		c28.sumDecoMinus();
+	}
+
 	// 83. 자유와 규제
 	public static void section83()
 	{
