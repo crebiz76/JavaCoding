@@ -8,7 +8,46 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter24.section71();
+		Chapter24.section72();
+	}
+}
+
+// 24 - overloading(예제 72)
+class Overloading
+{
+	void A()			{System.out.println("void A()");}
+	void A(int arg1) 	{System.out.println("void A(int arg1)");}
+	void A(String arg1)	{System.out.println("void A(String arg1)");}
+	int  B()			{System.out.println("int B()"); return 0;}
+}
+
+// 24 - overloading(예제 72)
+class Calculator24_2
+{
+	int[] oprands;
+	public void setOprands(int [] oprands)
+	{
+		this.oprands = oprands;
+	}
+
+	public void sum()
+	{
+		int total = 0;
+		for(int value: this.oprands)
+		{
+			total += value;
+		}
+		System.out.println(total);
+	}
+
+	public void avg()
+	{
+		int total = 0;
+		for(int value: this.oprands)
+		{
+			total += value;
+		}
+		System.out.println(total/this.oprands.length);
 	}
 }
 
@@ -54,6 +93,27 @@ class Calculator24_1
 // 24 - overloading
 class Chapter24
 {
+	// 72. overloading2
+	// 
+	public static void section72()
+	{
+		Overloading od = new Overloading();
+		od.A();
+		od.A(2);
+		od.A("coding everybody");
+		od.B();
+		System.out.println("");
+
+		Calculator24_2 c24_2 = new Calculator24_2();
+		c24_2.setOprands(new int[]{10, 20});
+		c24_2.sum();
+		c24_2.avg();
+
+		c24_2.setOprands(new int[]{10, 20, 30});
+		c24_2.sum();
+		c24_2.avg();		
+	}
+	
 	// 71. overloading1
 	public static void section71()
 	{
