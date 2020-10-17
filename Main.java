@@ -10,13 +10,42 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter28.section82();
+		Chapter28.section83();
+	}
+}
+
+// 28 - 접근 제어자(예제 83)
+class A
+{
+	public String y()
+	{
+		return "public void y()";
+	}
+
+	private String z()
+	{
+		return "private void z()";
+	}
+
+	public String x()
+	{
+		return z();
 	}
 }
 
 // 28 - 접근 제어자 
 class Chapter28
 {
+	// 83. 자유와 규제
+	public static void section83()
+	{
+		System.out.println("83. 자유와 규제");
+		A a = new A();
+		System.out.println(a.y());
+		// System.out.println(a.z());	// Error
+		System.out.println(a.x());
+	}
+
 	// 82. 접근 제어자
 	public static void section82()
 	{
