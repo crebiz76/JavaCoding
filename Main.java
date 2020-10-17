@@ -8,13 +8,19 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter25.section74();
+		Chapter25.section75();
 	}
 }
 
 // 25 - 클래스 패스
 class Chapter25
 {
+	// 75. 환경변수
+	public static void section75()
+	{
+		System.out.println("75. 환경변수");
+	}
+	 
 	// 73. 클래스의 경로
 	public static void section74()
 	{
