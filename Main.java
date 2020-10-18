@@ -10,7 +10,22 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter30.section90();
+		Chapter31.section91();
+	}
+}
+
+// 31 - 인터페이스(예제)
+interface I
+{
+	public void z();
+}
+// 31 - 인터페이스
+class Chapter31
+{
+	// 91. 인터페이스 - 문법과 개념
+	public static void section91()
+	{	
+		System.out.println("91. 인터페이스 - 문법과 개념");
 	}
 }
 
