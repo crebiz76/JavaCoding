@@ -10,11 +10,39 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter31.section92();
+		Chapter31.section93();
 	}
 }
 
 // 31 - 인터페이스(예제 92)
+interface I1
+{
+	public void x();
+}
+
+interface I2
+{
+	public void y();
+}
+
+interface I3
+{
+	public void z();
+}
+
+interface I4 extends I3
+{
+	public void e();
+}
+
+class A31 implements I1, I2, I4
+{
+	public void x(){ System.out.println("x()");}
+	public void y(){ System.out.println("y()");}
+	public void z(){ System.out.println("z()");}
+	public void e(){ System.out.println("e()");}
+}
+
 interface Calculatable
 {
 	public void setOprands(int first, int second, int third);
@@ -66,6 +94,17 @@ interface I
 // 31 - 인터페이스
 class Chapter31
 {
+	// 93. 인터페이스의 규칙들
+	public static void section93()
+	{
+		System.out.println("93. 인터페이스의 규칙들");
+		A31 a31 = new A31();
+		a31.x();
+		a31.y();
+		a31.z();
+		a31.e();
+	}
+
 	// 92. 인터페이스 - 사용하는 이유
 	public static void section92()
 	{
