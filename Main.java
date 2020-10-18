@@ -10,7 +10,41 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter29.section89();
+		Chapter30.section90();
+	}
+}
+
+// 30 - final(예제)
+class Calculator30
+{
+	static final double PI = 3.14;
+	int left, right;
+	public void setOprands(int left, int right)
+	{
+		this.left = left; this.right = right;
+	}
+	public void sum()
+	{
+		System.out.println(this.left + this.right);
+	}
+	public void avg()
+	{
+		System.out.println((this.left + this.right)/2);
+	}
+}
+
+// 30 - final
+class Chapter30
+{
+	public static void section90()
+	{
+		Calculator30 c30 = new Calculator30();
+		c30.setOprands(10, 20);
+		c30.sum();
+		c30.avg();
+		// The static field ? should be accessed in a static way.
+		// System.out.println(c30.PI);
+		System.out.println(Calculator30.PI);
 	}
 }
 
