@@ -10,10 +10,11 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter28.section84();
+		Chapter28.section85();
 	}
 }
 
+// 28 - 접근 제어자(예제 84)
 class Calculator28
 {
 	private int left, right;
@@ -59,6 +60,16 @@ class A
 // 28 - 접근 제어자 
 class Chapter28
 {
+	// 85. 세밀한 제어
+	public static void section85()
+	{
+		Same same = new Same();
+		System.out.println(same);
+
+		Other other = new Other();
+		System.out.println(other);
+	}
+
 	// 84. 접근 제어자를 사용하는 이유
 	public static void section84()
 	{
