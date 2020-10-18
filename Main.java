@@ -10,11 +10,53 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter29.section87();
+		Chapter29.section88();
 	}
 }
 
-// 29 - abstract(예시)
+// 29 - abstract(예시 88)
+abstract class Calculator29
+{
+	int left, right;
+	public void setOprands(int left, int right)
+	{
+		this.left = left; this.right = right;
+	}
+	public abstract void sum();
+	public abstract void avg();
+	public void run()
+	{
+		sum(); avg();
+	}
+}
+
+class CalculatorDecoPlus extends Calculator29
+{
+	public void sum()
+	{
+		System.out.println("+sum: " + (this.left + this.right));
+	}
+	
+	public void avg()
+	{
+		System.out.println("+avg: " + (this.left + this.right)/2);
+	}
+}
+
+class CalculatorDecoMinus extends Calculator29
+{
+	public void sum()
+	{
+		System.out.println("-sum: " + (this.left + this.right));
+	}
+	
+	public void avg()
+	{
+		System.out.println("-avg: " + (this.left + this.right)/2);
+	}
+}
+
+// 29 - abstract(예시 87)
 abstract class AA
 {
 	// public abstract int aa() {System.out.println("Hello");}
@@ -35,6 +77,20 @@ class BB extends AA{
 // 29 - abstract
 class Chapter29
 {
+	// 88. 추상 클래스를 사용하는 이유
+	// - 상속을 강제하기 위한 것이다. 
+	// - 하위 클래스의 책임으로 위임하는 것이다. 
+	public static void section88()
+	{
+		CalculatorDecoPlus c29plus = new CalculatorDecoPlus();
+		c29plus.setOprands(10, 20);
+		c29plus.run();
+
+		CalculatorDecoMinus c29minus = new CalculatorDecoMinus();
+		c29minus.setOprands(10, 20);
+		c29minus.run();
+	}
+
 	// 87. abstract 문법
 	public static void section87()
 	{
