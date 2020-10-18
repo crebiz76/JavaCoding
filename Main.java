@@ -10,7 +10,37 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter28.section86();
+		Chapter29.section87();
+	}
+}
+
+// 29 - abstract(예시)
+abstract class AA
+{
+	// public abstract int aa() {System.out.println("Hello");}
+	// 메서드의 시그니처만 정의하여 사용한다.
+	// 이 메서드의 구체적인 구현은 하위 클래스에서 오버라이딩 해야 한다.
+	// 이렇게 내용이 비어있는 메서드를 추상 메서드라고 한다.
+	public abstract int bb();
+	public void dd()
+	{
+		System.out.println("world");
+	}
+}
+
+class BB extends AA{
+	public int bb() { return 1; }
+}
+
+// 29 - abstract
+class Chapter29
+{
+	// 87. abstract 문법
+	public static void section87()
+	{
+		BB obj = new BB();
+		System.out.println(obj.bb());
+		obj.dd();
 	}
 }
 
