@@ -26,4 +26,13 @@ public class Same {
     {
         System.out.println("private");
     }
+
+    public static void main(String[] args)
+    {
+        Calculator28 c28 = new Calculator28();
+        c28.setOprands(10, 20);
+        // c28._sum();
+        c28.sumDecoPlus();
+        c28.sumDecoMinus();
+    }
 }

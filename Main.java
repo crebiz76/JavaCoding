@@ -10,7 +10,7 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter28.section85();
+		Chapter28.section86();
 	}
 }
 
@@ -60,6 +60,16 @@ class A
 // 28 - 접근 제어자 
 class Chapter28
 {
+	// 86. 접근 제어자를 사용하는 이유
+	public static void section86()
+	{
+		System.out.println("86. 접근 제어자를 사용하는 이유");
+		// public class
+		// : 다른 패키지의 클래스에서도 사용 가능
+		// default
+		// : 같은 패키지에서만 사용 가능
+	}
+
 	// 85. 세밀한 제어
 	public static void section85()
 	{
