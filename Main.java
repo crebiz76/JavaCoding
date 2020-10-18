@@ -10,7 +10,7 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter29.section88();
+		Chapter29.section89();
 	}
 }
 
@@ -77,6 +77,12 @@ class BB extends AA{
 // 29 - abstract
 class Chapter29
 {
+	// 89. 디자인 패턴
+	public static void section89()
+	{
+		System.out.println("89. 디자인 패턴");
+	}
+
 	// 88. 추상 클래스를 사용하는 이유
 	// - 상속을 강제하기 위한 것이다. 
 	// - 하위 클래스의 책임으로 위임하는 것이다. 
