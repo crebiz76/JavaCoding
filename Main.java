@@ -10,18 +10,69 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter31.section91();
+		Chapter31.section92();
 	}
 }
 
-// 31 - 인터페이스(예제)
+// 31 - 인터페이스(예제 92)
+interface Calculatable
+{
+	public void setOprands(int first, int second, int third);
+	public int sum();
+	public int avg();
+}
+
+class Calculator31 implements Calculatable
+{
+	int first, second, third;
+	public void setOprands(int first, int second, int third)
+	{
+		this.first = first; this.second = second; this.third = third;
+	}
+	public int sum()
+	{
+		return this.first + this.second + this.third;
+	}
+	public int avg()
+	{
+		return (this.first + this.second + this.third)/3;
+	}
+}
+
+class CalculatorDummy implements Calculatable
+{
+	public void setOprands(int first, int second, int third){}
+	public int sum() { return 600;}
+	public int avg() { return 200;}
+}
+
+class CalculatorConsumer
+{
+	public CalculatorConsumer()
+	{
+		// CalculatorDummy c = new CalculatorDummy();
+		Calculator31 c = new Calculator31();
+		c.setOprands(10, 20, 30);
+		System.out.println(c.sum()+c.avg());
+	}
+}
+
+// 31 - 인터페이스(예제 91)
 interface I
 {
 	public void z();
 }
+
 // 31 - 인터페이스
 class Chapter31
 {
+	// 92. 인터페이스 - 사용하는 이유
+	public static void section92()
+	{
+		CalculatorConsumer c = new CalculatorConsumer();
+		System.out.println(c);
+	}
+
 	// 91. 인터페이스 - 문법과 개념
 	public static void section91()
 	{	
