@@ -10,10 +10,32 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter32.section98();
+		Chapter32.section99();
 	}
 }
 
+// 32 - 다형성(예제 99)
+interface father{}
+interface mother{}
+interface programmer{
+	public void coding();
+}
+interface believer{}
+
+class Steve implements father, programmer, believer
+{
+	public void coding()
+	{
+		System.out.println("fast");
+	}
+}
+class Rachel implements mother, programmer
+{
+	public void coding()
+	{
+		System.out.println("elegance");
+	}
+}
 // 32 - 다형성(예제 98)
 interface I32a
 {
@@ -109,6 +131,16 @@ class O
 // 32 - 다형성
 class Chapter32
 {
+	// 99. 인터페이스와 다형성2
+	public static void section99()
+	{
+		programmer employee1 = new Steve();
+		programmer employee2 = new Rachel();
+
+		employee1.coding();
+		employee2.coding();
+	}
+
 	// 98. 인터페이스와 다형성1
 	public static void section98()
 	{
