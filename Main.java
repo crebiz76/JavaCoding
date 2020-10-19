@@ -10,9 +10,52 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter32.section96();
+		Chapter32.section97();
 	}
 }
+
+// 32 - 다형성(예제 97)
+abstract class Calculator32
+{
+	int left, right;
+	public void setOprands(int left, int right)
+	{
+		this.left = left; this.right = right;
+	}
+	int _sum()
+	{
+		return this.left + this.right;
+	}
+	public abstract void sum();
+	public abstract void avg();
+	public void run()
+	{
+		sum(); avg();
+	}
+}
+class Calculator32DecoPlus extends Calculator32
+{
+	public void sum()
+	{
+		System.out.println("+ sum: " + _sum());
+	}
+	public void avg()
+	{
+		System.out.println("+ avg: " + (this.left + this.right)/2);
+	}
+}
+class Calculator32DecoMinus extends Calculator32
+{
+	public void sum()
+	{
+		System.out.println("- sum: " + _sum());
+	}
+	public void avg()
+	{
+		System.out.println("- avg: " + (this.left + this.right)/2);
+	}
+}
+
 // 32 - 다형성(예제 95, 96)
 class A32
 {
@@ -45,7 +88,27 @@ class O
 // 32 - 다형성
 class Chapter32
 {
-	// 95. 클래스와 다형성2
+	// 97. 실전 예제(예제 97)
+	 public static void execute(Calculator32 cal)
+	 {
+		System.out.println("실행결과");
+		cal.run();
+	 }
+
+	// 97. 실전 예제
+	public static void section97()
+	{
+		Calculator32 c1 = new Calculator32DecoPlus();
+		c1.setOprands(10, 20);
+		
+		Calculator32 c2 = new Calculator32DecoMinus();
+		c2.setOprands(10, 20);
+
+		execute(c1);
+		execute(c2);
+	}
+
+	// 96. 클래스와 다형성2
 	public static void section96()
 	{
 		A32 obj = new B32();
