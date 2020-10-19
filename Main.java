@@ -10,10 +10,10 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter32.section95();
+		Chapter32.section96();
 	}
 }
-// 32 - 다형성(예제 95)
+// 32 - 다형성(예제 95, 96)
 class A32
 {
 	public String x() {return "A.x";}
@@ -22,6 +22,9 @@ class B32 extends A32
 {
 	public String x() {return "B.x";}
 	public String y() {return "y";}
+}
+class BB32 extends A32{
+	public String x() {return "BB.z";}
 }
 
 // 32 - 다형성(예제 94)
@@ -42,6 +45,15 @@ class O
 // 32 - 다형성
 class Chapter32
 {
+	// 95. 클래스와 다형성2
+	public static void section96()
+	{
+		A32 obj = new B32();
+		A32 obj2= new BB32();
+		System.out.println(obj.x());
+		System.out.println(obj2.x());
+	}
+
 	// 95. 클래스와 다형성1
 	public static void section95()
 	{
