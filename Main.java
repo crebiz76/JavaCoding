@@ -10,7 +10,28 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter32.section97();
+		Chapter32.section98();
+	}
+}
+
+// 32 - 다형성(예제 98)
+interface I32a
+{
+	public String A();
+}
+interface I32b
+{
+	public String B();
+}
+class C32 implements I32a, I32b
+{
+	public String A()
+	{
+		return "A";
+	}
+	public String B()
+	{
+		return "B";
 	}
 }
 
@@ -88,6 +109,25 @@ class O
 // 32 - 다형성
 class Chapter32
 {
+	// 98. 인터페이스와 다형성1
+	public static void section98()
+	{
+		C32 obj = new C32();
+		System.out.println(obj);
+		
+		I32a objA = new C32();
+		I32b objB = new C32();
+
+		System.out.println(obj.A());
+		System.out.println(obj.B());
+		
+		System.out.println(objA.A());
+		// objA.B();
+
+		// objB.A();
+		System.out.println(objB.B());		
+	}
+
 	// 97. 실전 예제(예제 97)
 	 public static void execute(Calculator32 cal)
 	 {
