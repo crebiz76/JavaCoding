@@ -10,8 +10,18 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter32.section94();
+		Chapter32.section95();
 	}
+}
+// 32 - 다형성(예제 95)
+class A32
+{
+	public String x() {return "A.x";}
+}
+class B32 extends A32
+{
+	public String x() {return "B.x";}
+	public String y() {return "y";}
 }
 
 // 32 - 다형성(예제 94)
@@ -32,6 +42,16 @@ class O
 // 32 - 다형성
 class Chapter32
 {
+	// 95. 클래스와 다형성1
+	public static void section95()
+	{
+		A32 obj = new B32();
+		System.out.println(obj.x());
+		// 클래스 B32를 클래스 A32의 데이터 타입으로 인스턴스화 할 때
+		// 클래서 A32에 존재하는 멤버만이 클래스 B32의 멤버가 된다. 
+		// System.out.println(obj.y());
+	}
+
 	// 94. 메서드와 다형성
 	public static void section94()
 	{
