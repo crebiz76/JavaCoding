@@ -10,7 +10,34 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter31.section93();
+		Chapter32.section94();
+	}
+}
+
+// 32 - 다형성(예제 94)
+class O
+{
+	public void a(int param)
+	{
+		System.out.println("숫자출력");
+		System.out.println(param);
+	}
+	public void a(String param)
+	{
+		System.out.println("문자출력");
+		System.out.println(param);
+	}
+}
+
+// 32 - 다형성
+class Chapter32
+{
+	// 94. 메서드와 다형성
+	public static void section94()
+	{
+		O o = new O();
+		o.a(1);
+		o.a("one");
 	}
 }
 
