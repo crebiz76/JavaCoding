@@ -10,10 +10,40 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter33.section101();
+		Chapter33.section102();
 	}
 }
 
+// 33 - 예외1: 문법(예제 102)
+class Calculator102
+{
+	int left, right;
+	public void setOprands(int left, int right)
+	{
+		this.left = left; this.right = right;
+	}
+	public void divide()
+	{
+		try
+		{
+			System.out.print("계산결과는 ");
+			System.out.print(this.left/this.right);
+			System.out.print(" 입니다.");
+			// System.out.println("");
+		}
+		catch(Exception e)
+		{
+			System.out.println("\n\n e.getMessage()\n" + e.getMessage());
+			System.out.println("\n\n e.toString()\n" + e.toString());
+			// Compile Error
+			// System.out.println("\n\n e.printStackTrace()\n" + e.printStackTrace());
+			System.out.println("\n\n e.printStackTrace()");
+			e.printStackTrace();			
+		}
+	}
+}
+
+// 33 - 예외1: 문법(예제 101)
 class Calculator101
 {
 	int left, right;
@@ -45,6 +75,14 @@ class Calculator101
 // 33 - 예외1: 문법
 class Chapter33
 {
+	// 102. 뒷수습의 방법
+	public static void section102()
+	{
+		Calculator102 c102 = new Calculator102();
+		c102.setOprands(10, 0);
+		c102.divide();
+	}
+
 	// 101. 예외란?
 	public static void section101()
 	{
