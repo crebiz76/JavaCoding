@@ -10,11 +10,11 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter33.section103();
+		Chapter33.section104();
 	}
 }
 
-// 33 - 예외1: 문법(예제 103)
+// 33 - 예외1: 문법(예제 103/104)
 class A103
 {
 	private int[] arr = new int[3];
@@ -41,6 +41,10 @@ class A103
 		catch(Exception e)
 		{
 			System.out.println("Exception");
+		}
+		finally
+		{
+			System.out.println("Finally");
 		}
 	}
 }
@@ -106,6 +110,15 @@ class Calculator101
 // 33 - 예외1: 문법
 class Chapter33
 {
+	// 104. finally
+	public static void section104()
+	{
+		A103 a = new A103();
+		a.z(10,0);
+		a.z(1,0);
+		a.z(2,1);
+	}
+
 	// 103. 다양한 예외들
 	public static void section103()
 	{
