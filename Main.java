@@ -10,7 +10,38 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter33.section102();
+		Chapter33.section103();
+	}
+}
+
+// 33 - 예외1: 문법(예제 103)
+class A103
+{
+	private int[] arr = new int[3];
+	A103()
+	{
+		arr[0] = 0; arr[1] = 10; arr[2] = 20;
+	}
+	public void z(int first, int second)
+	{
+		// System.out.println(arr[first]/arr[second]);
+		
+		try
+		{
+			System.out.println(arr[first]/arr[second]);
+		}
+		catch(ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println("ArrayIndexOutOfBoundsException");
+		}
+		catch(java.lang.ArithmeticException e)
+		{
+			System.out.println("ArithmeticException");
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception");
+		}
 	}
 }
 
@@ -75,6 +106,15 @@ class Calculator101
 // 33 - 예외1: 문법
 class Chapter33
 {
+	// 103. 다양한 예외들
+	public static void section103()
+	{
+		A103 a = new A103();
+		a.z(10,0);
+		a.z(1,0);
+		a.z(2,1);
+	}
+
 	// 102. 뒷수습의 방법
 	public static void section102()
 	{
