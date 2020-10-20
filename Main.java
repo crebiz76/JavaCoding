@@ -10,7 +10,54 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter33.section104();
+		Chapter34.section105();
+	}
+}
+
+// 34 - 예외2: 예외 던지기(예제 106)
+class B106
+{
+	void run() {}
+}
+class C106
+{
+	void run() 
+	{
+		B106 b = new B106();
+		b.run();
+	}
+}
+
+// 34 - 예외2: 예외 던지기
+class Chapter34
+{
+	// 105. 예외의 강제
+	public static void section105()
+	{
+		// Unhandled exception type FileNotFoundException
+		// BufferedReader bReader = new BufferedReader(new FileReader("out.txt"));
+		// String input = bReader.readLine();
+		// System.out.println(input);
+		BufferedReader bReader = null;
+		String input = null;
+		try
+		{
+			bReader = new BufferedReader(new FileReader("out.txt"));
+		}
+		catch(FileNotFoundException e)
+		{
+			e.printStackTrace();
+		}
+		
+		try
+		{
+			input = bReader.readLine();
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+		System.out.println(input);		
 	}
 }
 
