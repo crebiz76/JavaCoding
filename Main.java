@@ -10,13 +10,53 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter33.section100();
+		Chapter33.section101();
+	}
+}
+
+class Calculator101
+{
+	int left, right;
+	public void setOprands(int left, int right)
+	{
+		this.left = left; this.right = right;
+	}
+	public void divide()
+	{
+		// System.out.print("계산결과는 ");
+		// System.out.print(this.left/this.right);
+		// System.out.print(" 입니다.");
+
+		try
+		{
+			System.out.print("계산결과는 ");
+			System.out.print(this.left/this.right);
+			System.out.print(" 입니다.");
+			System.out.println("");
+		}
+		catch(Exception e)
+		{
+			System.out.print("오류가 발생했습니다.:" +e.getMessage());
+			System.out.println("");
+		}
 	}
 }
 
 // 33 - 예외1: 문법
 class Chapter33
 {
+	// 101. 예외란?
+	public static void section101()
+	{
+		Calculator101 c101a = new Calculator101();
+		c101a.setOprands(10, 0);
+		c101a.divide();
+
+		Calculator101 c101b = new Calculator101();
+		c101b.setOprands(10, 5);
+		c101b.divide();
+	}
+
 	// 100. 성공과 실패
 	public static void section100()
 	{
