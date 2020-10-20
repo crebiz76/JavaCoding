@@ -10,7 +10,7 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter34.section105();
+		Chapter34.section106();
 	}
 }
 
@@ -31,6 +31,15 @@ class C106
 // 34 - 예외2: 예외 던지기
 class Chapter34
 {
+	// 106. throw와 throws
+	public static void section106()
+	{
+		System.out.println("34 - 예외2: 예외 던지기");
+		System.out.println("106. throw와 throws");
+		C106 c = new C106();
+		c.run();
+	}
+
 	// 105. 예외의 강제
 	public static void section105()
 	{
