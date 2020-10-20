@@ -10,7 +10,18 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter32.section99();
+		Chapter33.section100();
+	}
+}
+
+// 33 - 예외1: 문법
+class Chapter33
+{
+	// 100. 성공과 실패
+	public static void section100()
+	{
+		System.out.println("33 - 예외1: 문법");
+		System.out.println("100. 성공과 실패");
 	}
 }
 
