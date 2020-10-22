@@ -10,7 +10,31 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter34.section106();
+		Chapter34.section107();
+	}
+}
+
+// 34 - 예외2: 예외 던지기(예제 107)
+class B107
+{
+	void run() throws IOException, FileNotFoundException
+	{
+		BufferedReader bReader = null;
+		String input = null;
+		bReader = new BufferedReader(new FileReader("out.txt"));
+		System.out.println(bReader);
+		
+		input = bReader.readLine();
+		System.out.println(input);
+	}
+}
+
+class C107
+{
+	void run() throws IOException, FileNotFoundException
+	{
+		B107 b = new B107();
+		b.run();
 	}
 }
 
@@ -31,6 +55,24 @@ class C106
 // 34 - 예외2: 예외 던지기
 class Chapter34
 {
+	// 107. 책임의 전가 throws
+	public static void section107()
+	{
+		C107 c = new C107();
+		try{
+			c.run();
+		}
+		catch(FileNotFoundException e)
+		{
+			System.out.println("out.txt 파일은 설정 파일입니다.");
+			System.out.println("이 파일이 프로젝트 루트 디렉토리에 존재해야 합니다. ");
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+
 	// 106. throw와 throws
 	public static void section106()
 	{
