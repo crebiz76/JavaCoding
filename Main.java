@@ -10,7 +10,60 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter34.section107();
+		Chapter35.section108();
+	}
+}
+
+// 35 - 예외3 - 만들기(예제 108)
+class Calculator108
+{
+	int left, right;
+	public void setOprands(int left, int right)
+	{
+		// if(right == 0)
+		// {
+		// 	throw new IllegalArgumentException("두번째 인자의 값은 0이 될 수 없습니다. ");
+		// }
+		this.left = left; this.right = right;
+	}
+	public void divide()
+	{
+		if(right == 0)
+		{
+			throw new ArithmeticException("0으로 나눌 수 없습니다. ");
+		}
+		try
+		{
+			System.out.print("계산결과는 ");
+			System.out.print(this.left/this.right);
+			System.out.print(" 입니다.");			
+		}
+		catch(Exception e)
+		{
+			System.out.println("\n\n e.getMessage()\n" + e.getMessage());
+			System.out.println("\n\n e.toString()\n" + e.toString());
+			System.out.println("\n\n e.printStackTrace()");
+			e.printStackTrace();
+		}
+	}
+}
+
+// 35 - 예외3 - 만들기 
+class Chapter35
+{
+	public static void section108()
+	{
+		Calculator108 c1 = new Calculator108();
+		c1.setOprands(10, 0);
+		try
+		{
+			c1.divide();
+		}
+		catch(ArithmeticException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		
 	}
 }
 
