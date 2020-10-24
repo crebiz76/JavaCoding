@@ -10,7 +10,29 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter35.section108();
+		Chapter35.section109();
+	}
+}
+
+// 35 - 예외3 - 만들기(예제 109)
+class E
+{
+	void throwArithmeticException()
+	{
+		throw new ArithmeticException();
+	}
+	void throwIOException()
+	{
+		//Unhandled exception type IOException
+		// throw new IOException();
+		try
+		{
+			throw new IOException();
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
 	}
 }
 
@@ -51,6 +73,26 @@ class Calculator108
 // 35 - 예외3 - 만들기 
 class Chapter35
 {
+	// 109. 예외의 여러가지 상황들
+	public static void section109()
+	{
+		E e1 = new E();
+		// e1.throwArithmeticException();
+		// e1.throwIOException();
+		try
+		{
+			System.out.println("throw ArithmeticException");
+			e1.throwArithmeticException();
+		}
+		catch(ArithmeticException e)
+		{
+			e.printStackTrace();
+		}
+		System.out.println("throw IOException");
+		e1.throwIOException();
+	}
+
+	// 108. 예외 만들기
 	public static void section108()
 	{
 		Calculator108 c1 = new Calculator108();
