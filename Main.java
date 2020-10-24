@@ -10,7 +10,7 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter35.section109();
+		Chapter35.section110();
 	}
 }
 
@@ -73,6 +73,22 @@ class Calculator108
 // 35 - 예외3 - 만들기 
 class Chapter35
 {
+	// 110. 예외의 선조 Throwable
+	public static void section110()
+	{
+		System.out.println("java.lang.Object");
+		System.out.println("\\_java.lang.Throwable");
+		System.out.println("  \\_java.lang.Throwable");
+		System.out.println("  |_java.lang.Exception");
+		System.out.println("    \\_java.lang.RuntimeException");
+		System.out.println("      \\_java.lang.ArithmeticException");
+
+		System.out.println("");
+		System.out.println("unchecked 예외: RuntimeException의 하위클래스");
+		System.out.println("checked 예외: RuntimeException을 제외한 Exception의 하위클래스");
+
+	}
+
 	// 109. 예외의 여러가지 상황들
 	public static void section109()
 	{
