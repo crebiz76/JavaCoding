@@ -10,7 +10,45 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter35.section110();
+		Chapter35.section111();
+	}
+}
+
+// 35 - 예외3 - 만들기(예제 111)
+class DivideException extends Exception
+{
+	DivideException()
+	{
+		super();
+	}
+	DivideException(String message)
+	{
+		super(message);
+	}
+}
+
+// 35 - 예외3 - 만들기(예제 111)
+class Calculator111
+{
+	int left, right;
+	public void setOprands(int left, int right)
+	{
+		this.left = left; this.right = right;
+	}
+	public void divide()
+	{
+		if(this.right == 0)
+		{
+			try
+			{
+				throw new DivideException("0으로 나누는 것은 허용되지 않습니다. ");		
+			}
+			catch(DivideException e)
+			{
+				e.printStackTrace();
+			}
+		}
+		System.out.print(this.left/this.right);
 	}
 }
 
@@ -73,6 +111,21 @@ class Calculator108
 // 35 - 예외3 - 만들기 
 class Chapter35
 {
+	// 111. 나만의 예외 만들기
+	public static void section111()
+	{
+		System.out.println("기본적으로 표준 예외 클래스를 사용한다. ");
+		System.out.println("예외를 checked로 할지 unchecked로 할지 결정해야 한다. ");
+		System.out.println("예외를 복구할 수 있다면 checked로 선택한다. ");
+		System.out.println("사용자에게 예외처리를 강제하는 것이다. ");
+
+		Calculator111 c2 = new Calculator111();
+		c2.setOprands(10, 0);
+		c2.divide();
+
+		
+	}
+
 	// 110. 예외의 선조 Throwable
 	public static void section110()
 	{
