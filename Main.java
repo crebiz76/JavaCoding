@@ -10,32 +10,75 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter37.section117();
+		Chapter37.section118();
+	}
+}
+// 37 - 상수와 enum(예제 118)
+class Fruit
+{	
+	private static final Fruit APPLE = new Fruit();
+	private static final Fruit PEACH = new Fruit();
+	private static final Fruit BANANA = new Fruit();
+
+	Fruit()
+	{
+		System.out.println("Fruit class");
+		System.out.println("apple=" + APPLE);
+		System.out.println("peach=" + PEACH);
+		System.out.println("banana=" + BANANA);
+	}
+}
+
+class Company extends Fruit
+{
+	private static final Company GOOGLE = new Company();
+	private static final Company APPLE = new Company();
+	private static final Company ORACLE = new Company();
+
+	Company()
+	{
+		System.out.println("Company class");
+		System.out.println("google=" + GOOGLE);
+		System.out.println("apple=" + APPLE);
+		System.out.println("oracle=" + ORACLE);
 	}
 }
 
 // 37 - 상수와 enum
-class Chapter37
+class Chapter37 extends Company
 {
-	private final static int APPLE = 1;
-	private final static int PEACH = 2;
-	private final static int BANANA = 3;
+	// 118. Enum의 배경
+	// private final static int GOOGLE = 1;
+	// private final static int APPLE = 2;
+	// private final static int ORACLE = 3;
+
+	public static void section118()
+	{
+		// if(Fruit.APPLE == Company.APPLE)
+		{
+			System.out.println("과일 애플과 회사 애플이 같다?");
+		}
+	}
 
 	// 117. 상수에 대한 복습
+	private final static int APPLES = 1;
+	private final static int PEACHS = 2;
+	private final static int BANANAS = 3;
+
 	public static void section117()
 	{
-		int type = APPLE;
+		int type = APPLES;
 		switch(type)
 		{
-			case APPLE:
+			case APPLES:
 			System.out.println(57+"kcal");
 			break;
 
-			case PEACH:
+			case PEACHS:
 			System.out.println(34+"kcal");
 			break;
 
-			case BANANA:
+			case BANANAS:
 			System.out.println(93+"kcal");
 			break;
 		}
