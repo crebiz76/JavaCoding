@@ -10,14 +10,25 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter37.section119();
+		Chapter37.section120();
 	}
 }
 
-// 37 - 상수와 enum(예제 119)
+// 37 - 상수와 enum(예제 119, 120)
 enum FRUITS
 {
-	APPLE, PEACH, BANANA;
+	// APPLE, PEACH, BANANA;
+	APPLE("red"), PEACH("pink"), BANANA("yellow");
+	public String color;
+	FRUITS(String color)
+	{
+		System.out.println("Call Constructor "+this);
+		this.color = color;
+	}
+	String getColor()
+	{
+		return this.color;
+	}
 }
 
 enum COMPANYS
@@ -59,6 +70,15 @@ class Company extends Fruit
 // 37 - 상수와 enum
 class Chapter37 //extends Company
 {
+	// 120. Enum과 생성자
+	public static void section120()
+	{
+		for(FRUITS f: FRUITS.values())
+		{
+			System.out.println(f+", "+f.getColor());
+		}
+	}
+
 	// 119. Enum의 문법
 	public static void section119()
 	{
