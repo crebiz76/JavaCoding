@@ -10,9 +10,21 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter37.section118();
+		Chapter37.section119();
 	}
 }
+
+// 37 - 상수와 enum(예제 119)
+enum FRUITS
+{
+	APPLE, PEACH, BANANA;
+}
+
+enum COMPANYS
+{
+	GOOGLE, APPLE, ORACLE;
+}
+
 // 37 - 상수와 enum(예제 118)
 class Fruit
 {	
@@ -45,8 +57,31 @@ class Company extends Fruit
 }
 
 // 37 - 상수와 enum
-class Chapter37 extends Company
+class Chapter37 //extends Company
 {
+	// 119. Enum의 문법
+	public static void section119()
+	{
+		FRUITS type = FRUITS.APPLE;
+		switch(type)
+		{
+			case APPLE:
+			System.out.println(57+"kcal");
+			break;
+
+			case PEACH:
+			System.out.println(34+"kcal");
+			break;
+
+			case BANANA:
+			System.out.println(93+"kcal");
+			break;
+		}
+		// System.out.println(FRUITS.APPLE);
+		// System.out.println(FRUITS.PEACH);
+		// System.out.println(FRUITS.BANANA);
+	}
+
 	// 118. Enum의 배경
 	// private final static int GOOGLE = 1;
 	// private final static int APPLE = 2;
