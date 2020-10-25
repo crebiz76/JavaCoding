@@ -10,7 +10,7 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter36.section114();
+		Chapter36.section115();
 	}
 }
 
@@ -61,6 +61,13 @@ class O112 extends Object
 // 36 - Object 클래스
 class Chapter36
 {
+	// 115. finalize
+	public static void section115()
+	{
+		System.out.println("115. finalize");
+		System.out.println("garbage collection");
+	}
+
 	// 114. equals
 	public static void section114()
 	{
