@@ -10,11 +10,31 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter35.section111();
+		Chapter36.section112();
+	}
+}
+
+// 36 - Object 클래스(예제 112)
+class O112 extends Object
+{
+
+}
+
+// 36 - Object 클래스
+class Chapter36
+{
+	// 112. 상속
+	public static void section112()
+	{
+		O112 o = new O112();
+		System.out.println(o.getClass());
 	}
 }
 
 // 35 - 예외3 - 만들기(예제 111)
+@SuppressWarnings("serial")
+// 클래스의 extends를 따라가 보면 부모클래스에 implements Serializable 객체가 있기 때문입니다.
+//  
 class DivideException extends Exception
 {
 	DivideException()
@@ -123,7 +143,7 @@ class Chapter35
 		c2.setOprands(10, 0);
 		c2.divide();
 
-		
+
 	}
 
 	// 110. 예외의 선조 Throwable
