@@ -10,7 +10,45 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter36.section115();
+		Chapter36.section116();
+	}
+}
+
+// 36 - Object 클래스(예제 116)
+class Human
+{
+	protected String test()
+	{
+		return "test";
+	}
+}
+
+class Student116 extends Human implements Cloneable
+{
+	String name;
+	Student116(String name)
+	{
+		this.name = name;
+	}
+	protected Object clone() throws CloneNotSupportedException
+	{
+		return super.clone();
+	}
+}
+
+// 36 - Object 클래스(예제 114)
+class Student	//extends Object
+{
+	String name;
+	Student(String name)
+	{
+		this.name = name;
+	}
+	public boolean equals(Object obj)
+	{
+		Student _obj = (Student)obj;
+		// return name == _obj.name;
+		return this.name == _obj.name;
 	}
 }
 
@@ -36,22 +74,6 @@ class Calculator113
 	}
 }
 
-// 36 - Object 클래스(예제 114)
-class Student	//extends Object
-{
-	String name;
-	Student(String name)
-	{
-		this.name = name;
-	}
-	public boolean equals(Object obj)
-	{
-		Student _obj = (Student)obj;
-		// return name == _obj.name;
-		return this.name == _obj.name;
-	}
-}
-
 // 36 - Object 클래스(예제 112)
 class O112 extends Object
 {
@@ -61,6 +83,23 @@ class O112 extends Object
 // 36 - Object 클래스
 class Chapter36
 {
+	// 116. clone
+	public static void section116()
+	{
+		Student116 s1 = new Student116("egoing");
+		System.out.println(s1.test());
+		try
+		{
+			Student116 s2 = (Student116)s1.clone();
+			System.out.println(s1.name);
+			System.out.println(s2.name);
+		}
+		catch(CloneNotSupportedException e)
+		{
+			e.printStackTrace();
+		}
+	}
+
 	// 115. finalize
 	public static void section115()
 	{
