@@ -10,7 +10,7 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter36.section113();
+		Chapter36.section114();
 	}
 }
 
@@ -36,6 +36,22 @@ class Calculator113
 	}
 }
 
+// 36 - Object 클래스(예제 114)
+class Student	//extends Object
+{
+	String name;
+	Student(String name)
+	{
+		this.name = name;
+	}
+	public boolean equals(Object obj)
+	{
+		Student _obj = (Student)obj;
+		// return name == _obj.name;
+		return this.name == _obj.name;
+	}
+}
+
 // 36 - Object 클래스(예제 112)
 class O112 extends Object
 {
@@ -45,7 +61,17 @@ class O112 extends Object
 // 36 - Object 클래스
 class Chapter36
 {
+	// 114. equals
+	public static void section114()
+	{
+		Student s1 = new Student("egoing");
+		Student s2 = new Student("egoing");
+		System.out.println(s1 == s2);
+		System.out.println(s1.equals(s2));
+	}
+
 	// 113. toString
+	// https://docs.oracle.com/javase/7/docs/api/overview-summary.html
 	public static void section113()
 	{
 		Calculator113 c1 = new Calculator113();
