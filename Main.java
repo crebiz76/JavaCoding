@@ -10,7 +10,29 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter36.section112();
+		Chapter36.section113();
+	}
+}
+
+// 36 - Object 클래스(예제 113)
+class Calculator113
+{
+	int left, right;
+	public void setOprands(int left, int right)
+	{
+		this.left = left; this.right = right;
+	}
+	public void sum()
+	{
+		System.out.println(this.left + this.right);
+	}
+	public void avg()
+	{
+		System.out.println((this.left + this.right)/2);
+	}
+	public String toString()
+	{
+		return "left: " + this.left + ", right: " + this.right;
 	}
 }
 
@@ -23,6 +45,15 @@ class O112 extends Object
 // 36 - Object 클래스
 class Chapter36
 {
+	// 113. toString
+	public static void section113()
+	{
+		Calculator113 c1 = new Calculator113();
+		c1.setOprands(10, 20);
+		System.out.println(c1);
+		System.out.println(c1.toString());
+	}
+
 	// 112. 상속
 	public static void section112()
 	{
