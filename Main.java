@@ -10,8 +10,32 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter39.section127();
+		Chapter39.section128();
 	}
+}
+
+// 39 - 제네릭(예제 128)
+class EmployeeInfo128
+{
+    public int rank;
+	EmployeeInfo128(int rank)
+	{
+		this.rank = rank;
+	}
+}
+class Person128<T, S>
+{
+    public T info;
+    public S id;
+	Person128(T info, S id)
+	{
+        this.info = info;
+        this.id = id;
+    }
+	public <U> void printInfo(U info)
+	{
+        System.out.println(info);
+    }
 }
 
 // 39 - 제네릭(예제 127)
@@ -101,6 +125,16 @@ class GenericDemo
 // 39 - 제네릭
 class Chapter39 //extends GenericDemo2
 {
+	// 128. 제네릭의 생략
+	public static void section128()
+	{
+		EmployeeInfo128 e = new EmployeeInfo128(1);
+		Integer i = 10;
+		Person128<EmployeeInfo128, Integer> p1 = new Person128<EmployeeInfo128, Integer>(e, i);
+		p1.<EmployeeInfo128>printInfo(e);
+		p1.printInfo(e);
+	}
+
 	// 127. 제네릭의 특성
 	public static void section127()
 	{
