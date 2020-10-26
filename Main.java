@@ -10,7 +10,21 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter37.section120();
+		Chapter38.section121();
+	}
+}
+
+// 38 - 참조
+class Chapter38
+{
+	// 121. 복제
+	public static void section121()
+	{
+		int a = 1;
+		int b = a;
+		b = 2;
+		System.out.println("runValue(a), "+a);
+		System.out.println("runValue(b), "+b);
 	}
 }
 
