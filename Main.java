@@ -10,7 +10,36 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter38.section124();
+		Chapter39.section125();
+	}
+}
+
+// 39 - 제네릭(예제 125)
+class Person<T>
+{
+	public T info;
+}
+
+// public class GenericDemo
+class GenericDemo
+{
+	GenericDemo()
+	{
+		Person<String> p1 = new Person<String>();
+		Person<StringBuilder> p2 = new Person<StringBuilder>();
+		System.out.println(p1);
+		System.out.println(p2);
+	}
+}
+
+// 39 - 제네릭
+class Chapter39 //extends GenericDemo
+{
+	// 125. 제네릭의 사용
+	public static void section125()
+	{
+		GenericDemo gd = new GenericDemo();
+		System.out.println(gd);
 	}
 }
 
