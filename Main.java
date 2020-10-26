@@ -10,7 +10,33 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter39.section128();
+		Chapter39.section129();
+	}
+}
+
+// 39 - 제네릭(예제 129)
+abstract class Info129
+{
+	public abstract int getLevel();
+}
+class EmployeeInfo129 extends Info129
+{
+	public int rank;
+	EmployeeInfo129(int rank)
+	{
+		this.rank = rank;
+	}
+	public int getLevel()
+	{
+		return this.rank;
+	}
+}
+class Person129<T extends Info129>
+{
+	public T info;
+	Person129(T info)
+	{
+		this.info = info;
 	}
 }
 
@@ -125,6 +151,15 @@ class GenericDemo
 // 39 - 제네릭
 class Chapter39 //extends GenericDemo2
 {
+	// 129. 제네릭의 제한
+	public static void section129()
+	{
+		Person129<EmployeeInfo129> p1 = new Person129<EmployeeInfo129>(new EmployeeInfo129(1));
+		// Person129<String> p2 = new Person129<String>("부장");
+		System.out.println(p1);
+		System.out.println(p1.info);
+	}
+
 	// 128. 제네릭의 생략
 	public static void section128()
 	{
