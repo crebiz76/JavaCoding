@@ -10,7 +10,7 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter38.section122();
+		Chapter38.section123();
 	}
 }
 
@@ -48,6 +48,12 @@ class Reference
 // 38 - 참조
 class Chapter38 extends Reference
 {
+	// 123. 참조와 복제
+	public static void section123()
+	{
+		System.out.println("123. 참조와 복제");
+	}
+
 	// 122. 참조
 	public static void section122()
 	{
