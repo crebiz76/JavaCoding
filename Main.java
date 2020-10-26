@@ -10,10 +10,55 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter39.section125();
+		Chapter39.section126();
 	}
 }
 
+// 39 - 제네릭(예제 126)
+class StudentInfo
+{
+	public int grade;
+	StudentInfo(int grade)
+	{
+		this.grade = grade;
+	}
+}
+
+class StudentPerson
+{
+	public StudentInfo info;
+	StudentPerson(StudentInfo info)
+	{
+		this.info = info;
+	}
+}
+
+class EmployeeInfo
+{
+	public int rank;
+	EmployeeInfo(int rank)
+	{
+		this.rank = rank;
+	}
+}
+
+class Persons
+{
+	public Object info;
+	Persons(Object info)
+	{
+		this.info = info;
+	}
+}
+
+class EmployeePerson
+{
+	public EmployeeInfo info;
+	EmployeePerson(EmployeeInfo info)
+	{
+		this.info = info;
+	}
+}
 // 39 - 제네릭(예제 125)
 class Person<T>
 {
@@ -33,8 +78,21 @@ class GenericDemo
 }
 
 // 39 - 제네릭
-class Chapter39 //extends GenericDemo
+class Chapter39 //extends GenericDemo2
 {
+	// 126. 제네릭을 사용하는 이유
+	public static void section126()
+	{
+		// Case 1
+		StudentInfo si = new StudentInfo(2);
+		StudentPerson sp = new StudentPerson(si);
+		System.out.println(sp.info.grade);
+
+		EmployeeInfo ei = new EmployeeInfo(1);
+		EmployeePerson ep = new EmployeePerson(ei);
+		System.out.println(ep.info.rank);
+	}
+
 	// 125. 제네릭의 사용
 	public static void section125()
 	{
