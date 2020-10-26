@@ -10,13 +10,51 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter38.section121();
+		Chapter38.section122();
+	}
+}
+
+// 38 - 참조(예제 122)
+class A122
+{
+	public int id;
+	A122(int id)
+	{
+		this.id = id;
+	}
+}
+
+class Reference
+{
+	public static void runValue()
+	{
+		int a = 1;
+		int b = a;
+		b = 2;
+		System.out.println("runValue(a), "+a);
+		System.out.println("runValue(b), "+b);
+	}
+
+	public static void runReference()
+	{
+		A122 a = new A122(1);
+		A122 b = a;
+		b.id = 2;
+		System.out.println("runReferene(a), " +a.id);
+		System.out.println("runReferene(a), " +b.id);
 	}
 }
 
 // 38 - 참조
-class Chapter38
+class Chapter38 extends Reference
 {
+	// 122. 참조
+	public static void section122()
+	{
+		runValue();
+		runReference();
+	}
+
 	// 121. 복제
 	public static void section121()
 	{
