@@ -3,6 +3,8 @@ import java.util.ArrayList; // As for Chapter05.section11
 import java.util.Scanner;   // As for Chapter10.section22
 import java.util.Arrays;    // As for Chapter13.section34
 import java.io.*;           // As for Chapter15.section47
+import java.util.Iterator;	// As for Chapter40.section132
+import java.util.HashSet;	// As for Chapter40.section132
 
 import srcbin.*;			// As for Chapter26.*
 
@@ -10,13 +12,46 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter40.section131();
+		Chapter40.section132();
 	}
 }
 
 // 40 - Collection Framework
 class Chapter40
 {
+	// 132. List와 Set의 차이점
+	public static void section132()
+	{
+		ArrayList<String> al = new ArrayList<String>();
+		al.add("one");
+		al.add("two");
+		al.add("two");
+		al.add("three");
+		al.add("three");
+		al.add("five");
+		System.out.println("array");
+		Iterator<String> ai = al.iterator();
+		while(ai.hasNext())
+		{
+			System.out.println(ai.next());
+		}
+		System.out.println("");
+
+		HashSet<String> hs = new HashSet<String>();
+		hs.add("one");
+		hs.add("two");
+		hs.add("two");
+		hs.add("three");
+		hs.add("three");
+		hs.add("five");
+		System.out.println("array");
+		Iterator<String> hi = hs.iterator();
+		while(hi.hasNext())
+		{
+			System.out.println(hi.next());
+		}
+	}
+
 	// 131. 전체적인 구성
 	public static void section131()
 	{
