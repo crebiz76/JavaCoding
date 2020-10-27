@@ -4,7 +4,10 @@ import java.util.Scanner;   // As for Chapter10.section22
 import java.util.Arrays;    // As for Chapter13.section34
 import java.io.*;           // As for Chapter15.section47
 import java.util.Iterator;	// As for Chapter40.section132
+import java.util.Map;
 import java.util.HashSet;	// As for Chapter40.section132
+import java.util.HashMap;	// As for Chapter40.section133
+import java.util.Set;		// As for Chapter40.section134
 
 import srcbin.*;			// As for Chapter26.*
 
@@ -12,13 +15,51 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter40.section133();
+		Chapter40.section134();
 	}
 }
 
 // 40 - Collection Framework
 class Chapter40
 {
+	// 134. Map(예제 134)
+	static void iteratorUsingForEach(HashMap<String, Integer> map)
+	{
+		Set<Map.Entry<String, Integer>> entries = map.entrySet();
+		for (Map.Entry<String, Integer> entry : entries)
+		{
+			System.out.println(entry.getKey() + " : " + entry.getValue());
+		}
+	}
+	static void iteratorUsingIterator(HashMap<String, Integer> map)
+	{
+		Set<Map.Entry<String, Integer>> entries = map.entrySet();
+		Iterator<Map.Entry<String, Integer>> i = entries.iterator();
+		while(i.hasNext())
+		{
+			Map.Entry<String, Integer> entry = i.next();
+			System.out.println(entry.getKey() + " : " + entry.getValue());
+		}
+	}
+
+	// 134. Map
+	public static void section134()
+	{
+		HashMap<String, Integer> a = new HashMap<String, Integer>();
+		a.put("one", 1); 
+		a.put("two", 2);
+		a.put("three", 3);
+		a.put("four", 4);
+		System.out.println(a.get("one"));
+		System.out.println(a.get("two"));
+		System.out.println(a.get("three"));
+
+		System.out.println("iteratorUsingForEach");
+		iteratorUsingForEach(a);
+		System.out.println("iteratorUsingIterator");
+		iteratorUsingIterator(a);
+	}
+
 	// 133. Set
 	public static void section133()
 	{
