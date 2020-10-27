@@ -10,13 +10,36 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter40.section130();
+		Chapter40.section131();
 	}
 }
 
 // 40 - Collection Framework
 class Chapter40
 {
+	// 131. 전체적인 구성
+	public static void section131()
+	{
+		System.out.println("Collection");
+		System.out.println("└ Set");
+		System.out.println("| └ HashSet");
+		System.out.println("| └ LinkedHashSet");
+		System.out.println("| └ TreeSet");
+		System.out.println("└ List");
+		System.out.println("| └ ArrayList");
+		System.out.println("| └ Vector");
+		System.out.println("| └ LinkedList");
+		System.out.println("└ Queue");
+		System.out.println("  └ PriorityQueue");
+		System.out.println("");
+		System.out.println("Map");
+		System.out.println("└ SortedMap");
+		System.out.println("| └ TreeMap");
+		System.out.println("└ HashTable");
+		System.out.println("└ LinkedHashMap");
+		System.out.println("└ HashMap");
+	}
+
 	// 130. ArrayList의 사용법
 	public static void section130()
 	{
