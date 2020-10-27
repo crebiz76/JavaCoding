@@ -12,14 +12,41 @@ class Main
 {
 	public static void main(String[] args)
 	{
-		Chapter40.section132();
+		Chapter40.section133();
 	}
 }
 
 // 40 - Collection Framework
 class Chapter40
 {
-	// 132. List와 Set의 차이점
+	// 133. Set
+	public static void section133()
+	{
+		HashSet<Integer> A = new HashSet<Integer>();
+		A.add(1);	A.add(2);	A.add(3);
+		
+		HashSet<Integer> B = new HashSet<Integer>();
+		B.add(3);	B.add(4);	B.add(5);
+		
+		HashSet<Integer> C = new HashSet<Integer>();
+		C.add(1);	C.add(2);
+
+		// containsAll
+		System.out.println("containsAll");
+		System.out.println(A.containsAll(B));
+		System.out.println(A.containsAll(C));
+		// retainAll
+		// System.out.println("retainAll");
+		// System.out.println(A.retainAll(B));
+		// System.out.println(A.retainAll(C));
+
+		Iterator<Integer> hi = A.iterator();
+		while(hi.hasNext())
+		{
+			System.out.println(hi.next());
+		}
+	}
+	
 	public static void section132()
 	{
 		ArrayList<String> al = new ArrayList<String>();
